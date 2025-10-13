@@ -1,0 +1,12 @@
+[
+   {"task_id":0,"task_content_name":"完成1次招募","task_content_num":1,"task_reward":8,"task_reward_num":2},
+   {"task_id":1,"task_content_name":"完成1次对战","task_content_num":1,"task_reward":2,"task_reward_num":50},
+   {"task_id":2,"task_content_name":"完成1次英雄升级","task_content_num":1,"task_reward":1,"task_reward_num":2000},
+   {"task_id":3,"task_content_name":"在商店完成1次购买","task_content_num":1,"task_reward":1,"task_reward_num":2000},
+   {"task_id":4,"task_content_name":"完成1次充值","task_content_num":1,"task_reward":9,"task_reward_num":1},
+   {"task_id":5,"task_content_name":"击退100名敌人","task_content_num":100,"task_reward":18,"task_reward_num":1},
+   {"task_id":6,"task_content_name":"消耗5000金币","task_content_num":5000,"task_reward":8,"task_reward_num":2},
+   {"task_id":7,"task_content_name":"战斗胜利1次","task_content_num":1,"task_reward":2,"task_reward_num":100},
+   {"task_id":8,"task_content_name":"每日登录","task_content_num":1,"task_reward":1,"task_reward_num":500},
+   {"task_id":9,"task_content_name":"在线30分钟","task_content_num":30,"task_reward":5,"task_reward_num":1}
+]

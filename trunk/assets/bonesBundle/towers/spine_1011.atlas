@@ -1,0 +1,167 @@
+
+spine_1011.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fazhang
+  rotate: true
+  xy: 649, 107
+  size: 145, 399
+  orig: 147, 401
+  offset: 1, 1
+  index: -1
+gebo1
+  rotate: true
+  xy: 233, 7
+  size: 62, 94
+  orig: 64, 97
+  offset: 1, 2
+  index: -1
+gebo2
+  rotate: true
+  xy: 856, 49
+  size: 56, 50
+  orig: 58, 52
+  offset: 1, 1
+  index: -1
+gebo3
+  rotate: true
+  xy: 150, 6
+  size: 63, 81
+  orig: 65, 83
+  offset: 1, 1
+  index: -1
+gebo4
+  rotate: false
+  xy: 329, 9
+  size: 57, 60
+  orig: 59, 62
+  offset: 1, 1
+  index: -1
+huzi1
+  rotate: false
+  xy: 430, 78
+  size: 41, 25
+  orig: 41, 25
+  offset: 0, 0
+  index: -1
+huzi2
+  rotate: true
+  xy: 388, 11
+  size: 58, 27
+  orig: 58, 27
+  offset: 0, 0
+  index: -1
+huzi3
+  rotate: false
+  xy: 529, 2
+  size: 97, 101
+  orig: 97, 104
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: false
+  xy: 150, 71
+  size: 278, 181
+  orig: 283, 183
+  offset: 0, 2
+  index: -1
+nengliangshi1
+  rotate: false
+  xy: 473, 83
+  size: 15, 20
+  orig: 17, 22
+  offset: 1, 1
+  index: -1
+nengliangshi2
+  rotate: false
+  xy: 956, 6
+  size: 34, 43
+  orig: 36, 45
+  offset: 1, 1
+  index: -1
+pifeng
+  rotate: true
+  xy: 2, 16
+  size: 236, 146
+  orig: 236, 146
+  offset: 0, 0
+  index: -1
+pifeng1
+  rotate: true
+  xy: 807, 34
+  size: 71, 47
+  orig: 73, 49
+  offset: 1, 1
+  index: -1
+pifeng2
+  rotate: false
+  xy: 417, 12
+  size: 110, 57
+  orig: 112, 59
+  offset: 1, 1
+  index: -1
+shengti
+  rotate: true
+  xy: 628, 13
+  size: 90, 74
+  orig: 204, 151
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 856, 2
+  size: 41, 45
+  orig: 43, 47
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: false
+  xy: 899, 4
+  size: 55, 43
+  orig: 57, 45
+  offset: 1, 1
+  index: -1
+tou
+  rotate: true
+  xy: 430, 105
+  size: 147, 136
+  orig: 149, 155
+  offset: 1, 18
+  index: -1
+tui1
+  rotate: false
+  xy: 756, 33
+  size: 49, 72
+  orig: 51, 74
+  offset: 1, 1
+  index: -1
+tui2
+  rotate: false
+  xy: 704, 33
+  size: 50, 72
+  orig: 52, 74
+  offset: 1, 1
+  index: -1
+xiabai1
+  rotate: true
+  xy: 908, 51
+  size: 54, 115
+  orig: 54, 115
+  offset: 0, 0
+  index: -1
+xiabai2
+  rotate: false
+  xy: 568, 105
+  size: 79, 147
+  orig: 79, 147
+  offset: 0, 0
+  index: -1
+xiabai3
+  rotate: true
+  xy: 1050, 135
+  size: 117, 115
+  orig: 120, 115
+  offset: 0, 0
+  index: -1

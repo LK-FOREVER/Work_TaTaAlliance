@@ -1,0 +1,69 @@
+
+enemy_116.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: true
+  xy: 2, 2
+  size: 33, 39
+  orig: 35, 41
+  offset: 1, 1
+  index: -1
+gebo2
+  rotate: true
+  xy: 43, 3
+  size: 32, 38
+  orig: 34, 40
+  offset: 1, 1
+  index: -1
+gebo3
+  rotate: false
+  xy: 52, 68
+  size: 37, 32
+  orig: 39, 34
+  offset: 1, 1
+  index: -1
+gebo4
+  rotate: true
+  xy: 52, 43
+  size: 23, 34
+  orig: 25, 36
+  offset: 1, 1
+  index: -1
+piaofu1
+  rotate: false
+  xy: 52, 38
+  size: 5, 3
+  orig: 7, 5
+  offset: 1, 1
+  index: -1
+piaofu2
+  rotate: false
+  xy: 88, 58
+  size: 8, 8
+  orig: 10, 10
+  offset: 1, 1
+  index: -1
+piaofu3
+  rotate: false
+  xy: 83, 29
+  size: 12, 12
+  orig: 14, 14
+  offset: 1, 1
+  index: -1
+piaofu4
+  rotate: false
+  xy: 91, 94
+  size: 6, 6
+  orig: 8, 8
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 37
+  size: 48, 63
+  orig: 50, 65
+  offset: 1, 1
+  index: -1

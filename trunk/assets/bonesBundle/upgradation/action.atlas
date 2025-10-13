@@ -1,0 +1,118 @@
+
+action.png
+size: 1777,1413
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images2/110647n619uu3h39cz79rt
+  rotate: true
+  xy: 2, 12
+  size: 1399, 1473
+  orig: 1500, 1500
+  offset: 66, 14
+  index: -1
+images2/235
+  rotate: true
+  xy: 1477, 112
+  size: 234, 114
+  orig: 512, 128
+  offset: 0, 12
+  index: -1
+images2/3/TX_xingguang_0001
+  rotate: true
+  xy: 1593, 177
+  size: 169, 152
+  orig: 215, 232
+  offset: 19, 6
+  index: -1
+images2/3/TX_xingguang_0003
+  rotate: true
+  xy: 1477, 520
+  size: 167, 159
+  orig: 215, 232
+  offset: 18, 11
+  index: -1
+images2/3/TX_xingguang_0005
+  rotate: true
+  xy: 1477, 689
+  size: 173, 161
+  orig: 215, 232
+  offset: 20, 16
+  index: -1
+images2/3/TX_xingguang_0007
+  rotate: true
+  xy: 1477, 1052
+  size: 178, 173
+  orig: 215, 232
+  offset: 22, 20
+  index: -1
+images2/3/TX_xingguang_0009
+  rotate: false
+  xy: 1477, 864
+  size: 169, 186
+  orig: 215, 232
+  offset: 17, 23
+  index: -1
+images2/3/TX_xingguang_0011
+  rotate: false
+  xy: 1477, 348
+  size: 156, 170
+  orig: 215, 232
+  offset: 37, 22
+  index: -1
+images2/3/TX_xingguang_0013
+  rotate: false
+  xy: 1477, 1232
+  size: 174, 179
+  orig: 215, 232
+  offset: 25, 25
+  index: -1
+images2/3/TX_xingguang_0015
+  rotate: true
+  xy: 1610, 10
+  size: 165, 149
+  orig: 215, 232
+  offset: 20, 5
+  index: -1
+images2/6/cn_0001
+  rotate: false
+  xy: 1652, 1081
+  size: 123, 149
+  orig: 150, 165
+  offset: 6, 16
+  index: -1
+images2/6/cn_0003
+  rotate: false
+  xy: 1635, 379
+  size: 138, 139
+  orig: 150, 165
+  offset: 8, 5
+  index: -1
+images2/6/cn_0005
+  rotate: false
+  xy: 1640, 729
+  size: 130, 133
+  orig: 150, 165
+  offset: 17, 11
+  index: -1
+images2/6/cn_0007
+  rotate: true
+  xy: 1477, 2
+  size: 108, 131
+  orig: 150, 165
+  offset: 38, 21
+  index: -1
+images2/6/cn_0009
+  rotate: false
+  xy: 1638, 537
+  size: 130, 150
+  orig: 150, 165
+  offset: 8, 8
+  index: -1
+images2/6/cn_0011
+  rotate: false
+  xy: 1648, 898
+  size: 126, 152
+  orig: 150, 165
+  offset: 5, 13
+  index: -1

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1001,
+        "name": "黑无常",
+        "rarity": "紫",
+        "probability": 200,
+        "hurttype": "单体型"
+    },
+    {
+        "id": 1002,
+        "name": "白无常",
+        "rarity": "紫",
+        "probability": 200,
+        "hurttype": "群体型"
+    },
+    {
+        "id": 1003,
+        "name": "孟婆",
+        "rarity": "紫",
+        "probability": 200,
+        "hurttype": "效果型"
+    }
+]

@@ -1,0 +1,55 @@
+
+enemy_112.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: false
+  xy: 148, 29
+  size: 28, 32
+  orig: 28, 32
+  offset: 0, 0
+  index: -1
+gebo2
+  rotate: true
+  xy: 118, 2
+  size: 22, 24
+  orig: 22, 24
+  offset: 0, 0
+  index: -1
+piaoye1
+  rotate: false
+  xy: 101, 3
+  size: 5, 6
+  orig: 7, 8
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: true
+  xy: 51, 7
+  size: 54, 48
+  orig: 55, 48
+  offset: 1, 0
+  index: -1
+weiba
+  rotate: true
+  xy: 118, 26
+  size: 35, 28
+  orig: 35, 28
+  offset: 0, 0
+  index: -1
+yezi
+  rotate: true
+  xy: 2, 5
+  size: 56, 47
+  orig: 56, 47
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: true
+  xy: 101, 11
+  size: 50, 15
+  orig: 50, 15
+  offset: 0, 0
+  index: -1

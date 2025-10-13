@@ -1,0 +1,55 @@
+
+npc_1004.png
+size: 123,279
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dabi
+  rotate: false
+  xy: 2, 51
+  size: 46, 49
+  orig: 49, 52
+  offset: 1, 2
+  index: -1
+dabi2
+  rotate: true
+  xy: 2, 2
+  size: 47, 43
+  orig: 49, 47
+  offset: 1, 2
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 102
+  size: 116, 175
+  orig: 118, 177
+  offset: 1, 1
+  index: -1
+shou
+  rotate: false
+  xy: 93, 38
+  size: 28, 29
+  orig: 31, 31
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: true
+  xy: 93, 69
+  size: 31, 28
+  orig: 34, 31
+  offset: 1, 2
+  index: -1
+xiaobi
+  rotate: false
+  xy: 50, 51
+  size: 41, 49
+  orig: 43, 51
+  offset: 1, 1
+  index: -1
+xiaobi2
+  rotate: false
+  xy: 47, 5
+  size: 43, 44
+  orig: 45, 46
+  offset: 1, 1
+  index: -1

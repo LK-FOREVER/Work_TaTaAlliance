@@ -1,0 +1,18 @@
+[
+   {"group_id":1,"equip_id":3001,"ratio":150},
+   {"group_id":1,"equip_id":3002,"ratio":150},
+   {"group_id":1,"equip_id":3003,"ratio":50},
+   {"group_id":1,"equip_id":3004,"ratio":50},
+   {"group_id":2,"equip_id":3005,"ratio":150},
+   {"group_id":2,"equip_id":3006,"ratio":150},
+   {"group_id":2,"equip_id":3007,"ratio":50},
+   {"group_id":2,"equip_id":3008,"ratio":50},
+   {"group_id":3,"equip_id":3009,"ratio":150},
+   {"group_id":3,"equip_id":3010,"ratio":150},
+   {"group_id":3,"equip_id":3011,"ratio":50},
+   {"group_id":3,"equip_id":3012,"ratio":50},
+   {"group_id":4,"equip_id":3013,"ratio":150},
+   {"group_id":4,"equip_id":3014,"ratio":150},
+   {"group_id":4,"equip_id":3015,"ratio":50},
+   {"group_id":4,"equip_id":3016,"ratio":50}
+]

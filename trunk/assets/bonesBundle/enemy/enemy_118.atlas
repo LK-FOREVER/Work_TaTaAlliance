@@ -1,0 +1,111 @@
+
+enemy_118.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bihuan
+  rotate: false
+  xy: 82, 13
+  size: 21, 18
+  orig: 21, 18
+  offset: 0, 0
+  index: -1
+erduo1
+  rotate: true
+  xy: 2, 10
+  size: 25, 45
+  orig: 25, 45
+  offset: 0, 0
+  index: -1
+erduo2
+  rotate: true
+  xy: 172, 61
+  size: 22, 35
+  orig: 22, 35
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 89, 60
+  size: 81, 63
+  orig: 86, 66
+  offset: 1, 2
+  index: -1
+tou
+  rotate: false
+  xy: 2, 37
+  size: 85, 86
+  orig: 111, 91
+  offset: 1, 1
+  index: -1
+toufa
+  rotate: false
+  xy: 172, 85
+  size: 76, 38
+  orig: 78, 38
+  offset: 2, 0
+  index: -1
+tui1
+  rotate: true
+  xy: 172, 42
+  size: 17, 26
+  orig: 19, 28
+  offset: 1, 1
+  index: -1
+tui2
+  rotate: true
+  xy: 49, 12
+  size: 23, 31
+  orig: 25, 33
+  offset: 1, 1
+  index: -1
+tui3
+  rotate: true
+  xy: 118, 37
+  size: 21, 26
+  orig: 23, 28
+  offset: 1, 1
+  index: -1
+tui4
+  rotate: false
+  xy: 209, 56
+  size: 29, 27
+  orig: 31, 29
+  offset: 1, 1
+  index: -1
+tui5
+  rotate: false
+  xy: 89, 33
+  size: 27, 25
+  orig: 29, 27
+  offset: 1, 1
+  index: -1
+tui6
+  rotate: true
+  xy: 146, 37
+  size: 21, 24
+  orig: 23, 26
+  offset: 1, 1
+  index: -1
+weibu
+  rotate: false
+  xy: 105, 14
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+yanjing1
+  rotate: true
+  xy: 240, 55
+  size: 28, 6
+  orig: 30, 8
+  offset: 1, 1
+  index: -1
+yanjing2
+  rotate: false
+  xy: 2, 2
+  size: 30, 6
+  orig: 32, 8
+  offset: 1, 1
+  index: -1

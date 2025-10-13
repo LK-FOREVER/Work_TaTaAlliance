@@ -1,0 +1,70 @@
+import {_decorator,Component,Node,resources,JsonAsset,error,Label,RichText,ProgressBar,NodeEventType,find,Sprite,Button,Slider,instantiate,Prefab,v3,director} from 'cc';
+const { ccclass, property } = _decorator;
+import { AudioManager } from './AudioManager';
+import { GameData } from '../Common/GameData';
+
+@ccclass('SetManager')
+export class SetManager extends Component {
+    setting_panel: Node = null;
+    music: Node = null;
+    sound: Node = null;
+    music_slider: Node = null;
+    music_slider_com: Slider;
+    music_progress: ProgressBar;
+    sound_slider: Node = null;
+    sound_slider_com: Slider;
+    sound_progress: ProgressBar;
+    audioMgr: AudioManager;
+    set_close:Node = null;
+
+    start() {
+        this.audioMgr = AudioManager.ins;
+        this.settingAudioinit();
+    }
+
+    settingAudioinit() {
+        this.setting_panel = this.node.getChildByName("setting_panel")
+        this.music = this.setting_panel.getChildByName('music');
+        this.sound = this.setting_panel.getChildByName('sound');
+
+        this.music_slider = this.music.getChildByName('Slider');
+        this.music_slider_com = this.music_slider.getComponent(Slider);
+        this.music_progress = this.music_slider.getComponent(ProgressBar);
+
+        this.sound_slider = this.sound.getChildByName('Slider');
+        this.sound_slider_com = this.sound_slider.getComponent(Slider);
+        this.sound_progress = this.sound_slider.getComponent(ProgressBar);
+
+        this.music_progress.progress = GameData.userData.audioMusic;
+        this.sound_progress.progress = GameData.userData.audioSound;
+        this.music_slider_com.progress = GameData.userData.audioMusic;
+        this.sound_slider_com.progress = GameData.userData.audioSound;
+
+        this.music_slider_com!.node.on('slide', this.musicCall, this);
+        this.sound_slider_com!.node.on('slide', this.soundCall, this);
+
+        this.set_close = this.node.getChildByName("set_close");
+        this.set_close.on(NodeEventType.TOUCH_END, () =>{
+            this.node.active = false;
+        })
+    }
+    musicCall(slider: Slider) {
+        let pro = slider.progress;
+        this.music_slider.getComponent(ProgressBar).progress = pro;
+        this.audioMgr.setMusicVolume(pro);
+        this.saveAudiodata()
+    }
+    soundCall(slider: Slider) {
+        let pro = slider.progress;
+        this.sound_slider.getComponent(ProgressBar).progress = pro;
+        this.audioMgr.setSoundVolume(pro);
+        this.saveAudiodata();
+    }
+    //保存音量
+    saveAudiodata() {
+        GameData.userData.audioMusic = this.music_slider_com.progress;
+        GameData.userData.audioSound = this.sound_slider_com.progress;
+        GameData.setUserData();
+    }
+}
+

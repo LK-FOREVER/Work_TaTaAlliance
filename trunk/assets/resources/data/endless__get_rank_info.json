@@ -1,0 +1,22 @@
+[
+   {"id":0,"player_id":1,"icon":"6001","name":"龙焰", "career": "司令", "score":500, "is_player":false},
+   {"id":1,"player_id":2,"icon":"6002","name":"星尘", "career": "副司令", "score":491, "is_player":false},
+   {"id":2,"player_id":3,"icon":"6003","name":"夜刃", "career": "战略指挥官", "score":480, "is_player":false},
+   {"id":3,"player_id":4,"icon":"6004","name":"Blitz", "career": "军队指挥官3", "score":467, "is_player":false},
+   {"id":4,"player_id":5,"icon":"6005","name":"瞬影", "career": "军队指挥官2", "score":401, "is_player":false},
+   {"id":5,"player_id":6,"icon":"6006","name":"赤瞳", "career": "军队指挥官1", "score":390, "is_player":false},
+   {"id":6,"player_id":7,"icon":"6007","name":"hhh", "career": "军团指挥官3", "score":384, "is_player":false},
+   {"id":7,"player_id":8,"icon":"6008","name":"吴十", "career": "军团指挥官2", "score":367, "is_player":false},
+   {"id":8,"player_id":9,"icon":"6009","name":"喵王", "career": "军团指挥官1", "score":351, "is_player":false},
+   {"id":9,"player_id":10,"icon":"6010","name":"Nyxis", "career": "军团指挥官3", "score":300, "is_player":false},
+   {"id":10,"player_id":11,"icon":"6011","name":"Zorak", "career": "军团指挥官2", "score":290, "is_player":false},
+   {"id":11,"player_id":12,"icon":"6012","name":"IronF", "career": "作战指挥官3", "score":275, "is_player":false},
+   {"id":12,"player_id":13,"icon":"6001","name":"十五", "career": "作战指挥官2", "score":254, "is_player":false},
+   {"id":13,"player_id":14,"icon":"6002","name":"寒霜", "career": "作战指挥官1", "score":191, "is_player":false},
+   {"id":14,"player_id":15,"icon":"6003","name":"沈", "career": "战术指挥官3", "score":154, "is_player":false},
+   {"id":15,"player_id":16,"icon":"6004","name":"雷云", "career": "高级指挥官2", "score":95, "is_player":false},
+   {"id":16,"player_id":17,"icon":"6005","name":"123321", "career": "中级指挥官1", "score":41, "is_player":false},
+   {"id":17,"player_id":18,"icon":"6006","name":"/[p']a", "career": "初级指挥官2", "score":40, "is_player":false},
+   {"id":18,"player_id":19,"icon":"6007","name":"Rogue", "career": "初级指挥官1", "score":21, "is_player":false},
+   {"id":19,"player_id":20,"icon":"6008","name":"Kairos", "career": "菜鸟指挥官", "score":10, "is_player":false}
+]

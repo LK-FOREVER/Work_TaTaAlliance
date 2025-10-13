@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "position_name": "实习生Ⅰ",
+        "reward": "/"
+    },
+    {
+        "id": 2,
+        "position_name": "实习生Ⅱ",
+        "reward": "随机紫色员工*1"
+    },
+    {
+        "id": 3,
+        "position_name": "实习生Ⅲ",
+        "reward": "决策牌*1"
+    },
+    {
+        "id": 4,
+        "position_name": "正式员工Ⅰ",
+        "reward": "员工上阵位置+1"
+    },
+    {
+        "id": 5,
+        "position_name": "正式员工Ⅱ",
+        "reward": "随机紫色员工*3"
+    },
+    {
+        "id": 6,
+        "position_name": "正式员工Ⅲ",
+        "reward": "决策牌*2"
+    },
+    {
+        "id": 7,
+        "position_name": "组长Ⅰ",
+        "reward": "决策牌抽取数量+1"
+    },
+    {
+        "id": 8,
+        "position_name": "组长Ⅱ",
+        "reward": "随机紫色员工*5"
+    },
+    {
+        "id": 9,
+        "position_name": "组长Ⅲ",
+        "reward": "决策牌*3"
+    },
+    {
+        "id": 10,
+        "position_name": "部门经理Ⅰ",
+        "reward": "员工上阵位置+1"
+    },
+    {
+        "id": 11,
+        "position_name": "部门经理Ⅱ",
+        "reward": "随机橙色员工*1"
+    },
+    {
+        "id": 12,
+        "position_name": "部门经理Ⅲ",
+        "reward": "决策牌*4"
+    },
+    {
+        "id": 13,
+        "position_name": "总监Ⅰ",
+        "reward": "决策牌抽取数量+1"
+    },
+    {
+        "id": 14,
+        "position_name": "总监Ⅱ",
+        "reward": "随机橙色员工*2"
+    },
+    {
+        "id": 15,
+        "position_name": "总监Ⅲ",
+        "reward": "决策牌*5"
+    },
+    {
+        "id": 16,
+        "position_name": "副总经理Ⅰ",
+        "reward": "员工上阵位置+1"
+    },
+    {
+        "id": 17,
+        "position_name": "副总经理Ⅱ",
+        "reward": "随机橙色员工*3"
+    },
+    {
+        "id": 18,
+        "position_name": "副总经理Ⅲ",
+        "reward": "决策牌*5"
+    },
+    {
+        "id": 19,
+        "position_name": "总经理Ⅰ",
+        "reward": "随机橙色员工*4"
+    },
+    {
+        "id": 20,
+        "position_name": "总经理Ⅱ",
+        "reward": "随机橙色员工*4"
+    },
+    {
+        "id": 21,
+        "position_name": "总经理Ⅲ",
+        "reward": "决策牌*5"
+    },
+    {
+        "id": 22,
+        "position_name": "首席执行官Ⅰ",
+        "reward": "决策牌抽取数量+1"
+    },
+    {
+        "id": 23,
+        "position_name": "首席执行官Ⅱ",
+        "reward": "随机橙色员工*5"
+    },
+    {
+        "id": 24,
+        "position_name": "首席执行官Ⅲ",
+        "reward": "决策牌*5"
+    }
+]

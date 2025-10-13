@@ -1,0 +1,55 @@
+
+npc_1001.png
+size: 163,211
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dabi
+  rotate: false
+  xy: 114, 148
+  size: 47, 61
+  orig: 51, 64
+  offset: 1, 1
+  index: -1
+dabi2
+  rotate: true
+  xy: 114, 96
+  size: 50, 47
+  orig: 52, 50
+  offset: 1, 2
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 47
+  size: 110, 162
+  orig: 112, 164
+  offset: 1, 1
+  index: -1
+shou
+  rotate: false
+  xy: 50, 8
+  size: 45, 37
+  orig: 47, 39
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: false
+  xy: 97, 2
+  size: 41, 38
+  orig: 43, 41
+  offset: 1, 2
+  index: -1
+xiaobi
+  rotate: true
+  xy: 2, 2
+  size: 43, 46
+  orig: 45, 48
+  offset: 1, 1
+  index: -1
+xiaobi2
+  rotate: true
+  xy: 114, 42
+  size: 52, 45
+  orig: 54, 52
+  offset: 1, 1
+  index: -1

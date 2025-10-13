@@ -1,0 +1,41 @@
+
+enemy_113.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: false
+  xy: 117, 20
+  size: 28, 39
+  orig: 28, 39
+  offset: 0, 0
+  index: -1
+gebo2
+  rotate: true
+  xy: 147, 2
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 2, 4
+  size: 55, 65
+  orig: 57, 67
+  offset: 1, 1
+  index: -1
+weiba
+  rotate: true
+  xy: 147, 25
+  size: 34, 28
+  orig: 34, 28
+  offset: 0, 0
+  index: -1
+yezi
+  rotate: true
+  xy: 69, 4
+  size: 55, 46
+  orig: 55, 46
+  offset: 0, 0
+  index: -1

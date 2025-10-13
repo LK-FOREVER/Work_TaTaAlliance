@@ -1,0 +1,153 @@
+
+spine_1009.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: false
+  xy: 244, 8
+  size: 195, 245
+  orig: 197, 247
+  offset: 1, 1
+  index: -1
+gebo2
+  rotate: true
+  xy: 912, 157
+  size: 34, 56
+  orig: 38, 59
+  offset: 2, 2
+  index: -1
+gebo3
+  rotate: true
+  xy: 548, 96
+  size: 157, 104
+  orig: 159, 106
+  offset: 1, 1
+  index: -1
+gebo4
+  rotate: true
+  xy: 832, 191
+  size: 62, 53
+  orig: 64, 56
+  offset: 1, 1
+  index: -1
+kaijia1
+  rotate: true
+  xy: 796, 29
+  size: 26, 28
+  orig: 28, 31
+  offset: 1, 2
+  index: -1
+kaijia2
+  rotate: true
+  xy: 889, 80
+  size: 55, 37
+  orig: 57, 39
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 602, 2
+  size: 122, 92
+  orig: 273, 141
+  offset: 142, 0
+  index: -1
+tou
+  rotate: true
+  xy: 2, 11
+  size: 242, 240
+  orig: 256, 255
+  offset: 13, 14
+  index: -1
+toufa1
+  rotate: false
+  xy: 441, 87
+  size: 105, 166
+  orig: 105, 166
+  offset: 0, 0
+  index: -1
+toufa2
+  rotate: true
+  xy: 441, 5
+  size: 80, 159
+  orig: 80, 161
+  offset: 0, 2
+  index: -1
+toujin
+  rotate: false
+  xy: 726, 28
+  size: 68, 71
+  orig: 71, 74
+  offset: 1, 1
+  index: -1
+toujin1
+  rotate: false
+  xy: 654, 101
+  size: 91, 58
+  orig: 95, 61
+  offset: 2, 2
+  index: -1
+tui1
+  rotate: true
+  xy: 654, 161
+  size: 92, 90
+  orig: 92, 90
+  offset: 0, 0
+  index: -1
+tui2
+  rotate: true
+  xy: 887, 193
+  size: 60, 34
+  orig: 60, 34
+  offset: 0, 0
+  index: -1
+tui3
+  rotate: true
+  xy: 746, 164
+  size: 89, 84
+  orig: 89, 84
+  offset: 0, 0
+  index: -1
+tui4
+  rotate: true
+  xy: 796, 57
+  size: 67, 41
+  orig: 67, 41
+  offset: 0, 0
+  index: -1
+yifu1
+  rotate: false
+  xy: 839, 32
+  size: 58, 38
+  orig: 58, 38
+  offset: 0, 0
+  index: -1
+yifu2
+  rotate: true
+  xy: 866, 137
+  size: 52, 44
+  orig: 52, 44
+  offset: 0, 0
+  index: -1
+yifu3
+  rotate: true
+  xy: 839, 72
+  size: 52, 48
+  orig: 52, 48
+  offset: 0, 0
+  index: -1
+zhengyan
+  rotate: false
+  xy: 747, 126
+  size: 117, 36
+  orig: 119, 38
+  offset: 1, 1
+  index: -1
+zidan
+  rotate: true
+  xy: 726, 4
+  size: 22, 112
+  orig: 24, 114
+  offset: 1, 1
+  index: -1
