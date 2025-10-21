@@ -1,4 +1,4 @@
-import { _decorator, Button, Color, Component, instantiate, Label, Node, Prefab, RichText, sp, Sprite,v3,find } from 'cc';
+import { _decorator, Button, Color, Component, instantiate, Label, Node, Prefab, RichText, sp, Sprite, v3, find } from 'cc';
 import { GameData } from '../../Common/GameData';
 import { LoadUtils } from '../../Common/LoadUtils';
 import { Utils } from '../../Common/Utils';
@@ -49,11 +49,11 @@ export class staffInfoController extends Component {
     }
 
     protected onLoad(): void {
-        EventManager.Instance.on(EventConst.UPDATE_STAFF_INFO, this.updateUI, this);
+        // EventManager.Instance.on(EventConst.UPDATE_STAFF_INFO, this.updateUI, this);
     }
 
     protected onDestroy(): void {
-        EventManager.Instance.off(EventConst.UPDATE_STAFF_INFO, this.updateUI, this);
+        // EventManager.Instance.off(EventConst.UPDATE_STAFF_INFO, this.updateUI, this);
     }
     // cumulativeAttrBonus: Record<string, number> = {
     //     atk: 0,
@@ -63,7 +63,7 @@ export class staffInfoController extends Component {
     //     crit_hurt: 0,
     //     slow_time: 0,
     // };
-    init(staff_info, isIllustration,unlock) {
+    init(staff_info, isIllustration, unlock) {
         this.audio_manager = AudioManager.ins;
         this.staff_info = staff_info
         this.isIllustration = isIllustration
@@ -124,18 +124,18 @@ export class staffInfoController extends Component {
                 break;
         }
         this.staff_info_container.getChildByName("staff_type").getComponent(Label).string = type_name
-        if(this.isIllustration){
+        if (this.isIllustration) {
             this.staff_info_container.getChildByName("staff_lv").getComponent(Label).string = `100`;
-        }else{
+        } else {
             this.staff_info_container.getChildByName("staff_lv").getComponent(Label).string = `${GameData.userData.towerLv[this.staff_info.id]}`;
         }
         // this.staff_info_container.getComponent(Sprite).spriteFrame = LoadUtils.Instance.staff.find(item => item.name === `staff_info_bg_${this.staff_info.quality}`)
         const staff = this.staff_info_container.getChildByName("staff");
-        LoadUtils.Instance.changeTowerBones(this.staff_info.id,staff);
+        LoadUtils.Instance.changeTowerBones(this.staff_info.id, staff);
     }
 
     update_staff_introduce() {
-        this.staff_introduce.getChildByName("text").getComponent(Label).string = TextUtils.Instance.staff__get_info.get(this.staff_info.staff_type_id).find(item=>item.id == this.staff_info.id).introduce;
+        this.staff_introduce.getChildByName("text").getComponent(Label).string = TextUtils.Instance.staff__get_info.get(this.staff_info.staff_type_id).find(item => item.id == this.staff_info.id).introduce;
     }
 
     update_exclusive_effect() {
@@ -211,20 +211,19 @@ export class staffInfoController extends Component {
         this.isMax = GameData.userData.towerLv[this.staff_info.id] >= this.staff__get_upgrade_cost.length
 
         //图鉴界面不显示升级按钮，只在酒馆界面显示
-        if(this.isIllustration || !this.unlock)
-        {
-            this.upgrade_btn.active = false; 
-        }else{
+        if (this.isIllustration) {
+            this.upgrade_btn.active = false;
+        } else {
             this.upgrade_btn.active = true;
         }
-        
+
         if (this.isMax) {
             // lv_box.children.forEach(item => {
-                // if (item.name !== "current_lv") {
-                    // item.active = false
-                // } else {
-                //     item.getComponent(Label).fontSize = 56
-                // }
+            // if (item.name !== "current_lv") {
+            // item.active = false
+            // } else {
+            //     item.getComponent(Label).fontSize = 56
+            // }
             // })
             // lv_box.active = false;
             lv_box.getChildByName("next_lv").active = false
@@ -245,20 +244,20 @@ export class staffInfoController extends Component {
             attr_continuous_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = false
             if (this.staff_info.poison_base !== 0) {
                 attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.count_base_continuous_attack(staff_lv_current)}`
-            }else{
+            } else {
                 attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${0}`
             }
 
             attr_crit.getChildByName("attr").getChildByName("next_attr").active = false
             attr_crit.getChildByName("attr").getChildByName("staff_info_arrow").active = false
-            attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit*100}%`
+            attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit * 100}%`
             attr_crit_hurt.getChildByName("attr").getChildByName("next_attr").active = false
             attr_crit_hurt.getChildByName("attr").getChildByName("staff_info_arrow").active = false
-            attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit_hurt*100}%`
+            attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit_hurt * 100}%`
         } else {
-            if(this.isIllustration){
+            if (this.isIllustration) {
                 lv_box.active = false;
-            }else{
+            } else {
                 lv_box.active = true;
                 // lv_box.getChildByName("current_lv").getComponent(Label).fontSize = 40
             }
@@ -268,45 +267,53 @@ export class staffInfoController extends Component {
             // lv_box.getChildByName("current_lv").getComponent(Label).fontSize = 40
 
             // 启用升级按钮
-            this.upgrade_btn.getComponent(Button).interactable = true
-            this.upgrade_btn.getComponent(Sprite).grayscale = false
-            this.upgrade_btn.getChildByName("Label").getComponent(Label).string = "升级"
+            if (!this.unlock) {// 如果未解锁，则禁用升级按钮
+                this.upgrade_btn.getComponent(Button).interactable = false
+                this.upgrade_btn.getComponent(Sprite).grayscale = true
+                this.upgrade_btn.getChildByName("Label").getComponent(Label).string = "未解锁"
+                this.upgrade_btn.getChildByName("common_red_dot").active = false
+            } else {
+                this.upgrade_btn.getComponent(Button).interactable = true
+                this.upgrade_btn.getComponent(Sprite).grayscale = false
+                this.upgrade_btn.getChildByName("Label").getComponent(Label).string = "升级"
+            }
+
             // 基础攻击和持续攻击
-            if(this.isIllustration){
+            if (this.isIllustration) {
                 attr_attack.getChildByName("attr").getChildByName("next_attr").active = false
                 attr_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = false
                 upgrade_cost_1.active = false
                 upgrade_cost_2.active = false
                 attr_continuous_attack.getChildByName("attr").getChildByName("next_attr").active = false
-                attr_continuous_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = false 
+                attr_continuous_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = false
                 attr_crit.getChildByName("attr").getChildByName("next_attr").active = false
                 attr_crit.getChildByName("attr").getChildByName("staff_info_arrow").active = false
                 attr_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.count_base_attack(100)}`
                 if (this.staff_info.poison_base !== 0) {
                     attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.count_base_continuous_attack(100)}`
-                }else{
+                } else {
                     attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${0}`
                 }
             }
-            else{
+            else {
                 attr_attack.getChildByName("attr").getChildByName("next_attr").active = true
                 attr_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = true
                 attr_attack.getChildByName("attr").getChildByName("next_attr").getComponent(Label).string = `${this.count_base_attack(staff_lv_next)}`
                 attr_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.count_base_attack(staff_lv_current)}`
 
-                if(!this.unlock){
-                    upgrade_cost_1.active = false
-                    upgrade_cost_2.active = false
-                }else{
-                    upgrade_cost_1.active = true
-                    upgrade_cost_2.active = true
-                }
+                // if(!this.unlock){
+                //     upgrade_cost_1.active = false
+                //     upgrade_cost_2.active = false
+                // }else{
+                upgrade_cost_1.active = true
+                upgrade_cost_2.active = true
+                // }
                 attr_continuous_attack.getChildByName("attr").getChildByName("next_attr").active = true
                 attr_continuous_attack.getChildByName("attr").getChildByName("staff_info_arrow").active = true
                 attr_continuous_attack.getChildByName("attr").getChildByName("next_attr").getComponent(Label).string = `${this.count_base_continuous_attack(staff_lv_next)}`
                 if (this.staff_info.poison_base !== 0) {
                     attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.count_base_continuous_attack(staff_lv_current)}`
-                }else{
+                } else {
                     attr_continuous_attack.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${0}`
                 }
 
@@ -316,29 +323,32 @@ export class staffInfoController extends Component {
             }
             // attr_continuous_attack.active = this.staff_info.poison_base !== 0
 
-            if(this.unlock)
-            {
-                attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit*100}%`
-                attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit_hurt*100}%`
+            if (this.unlock) {
+                attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit * 100}%`
+                attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${GameData.userData.towerlist.find(item => item.id === this.staff_info.id).crit_hurt * 100}%`
             }
-            else{
-                attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.staff_info.crit*100}%`
-                attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.staff_info.crit_hurt*100}%`
+            else {
+                attr_crit.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.staff_info.crit * 100}%`
+                attr_crit_hurt.getChildByName("attr").getChildByName("current_attr").getComponent(Label).string = `${this.staff_info.crit_hurt * 100}%`
             }
             // 下一等级的升级消耗
-            this.upgrade_cost = this.staff__get_upgrade_cost.find(item => item.lv === staff_lv_next)
+            if (!this.unlock) {
+                this.upgrade_cost = this.staff__get_upgrade_cost.find(item => item.lv === staff_lv_next + 1);
+            } else {
+                this.upgrade_cost = this.staff__get_upgrade_cost.find(item => item.lv === staff_lv_next);
+            }
             const piece_num = GameData.userData.towerDebris[this.staff_info.piece_goods_id]
             const piece_num_format = Utils.formatNumber(piece_num)
             const goods_num = GameData.userData.hasGoodsList[1]
             const goods_num_format = GameData.num2cn(goods_num);
             const cost_1_format = GameData.num2cn(this.upgrade_cost.cost_1);
-            upgrade_cost_1.getChildByName("num").getComponent(Label).color =  goods_num < this.upgrade_cost.cost_1 ? new Color(208, 76, 66) : new Color(255, 255, 255);
+            upgrade_cost_1.getChildByName("num").getComponent(Label).color = goods_num < this.upgrade_cost.cost_1 ? new Color(208, 76, 66) : new Color(255, 255, 255);
             upgrade_cost_1.getChildByName("num").getComponent(Label).string = goods_num_format;
             upgrade_cost_1.getChildByName("cost").getComponent(Label).string = cost_1_format;
             upgrade_cost_2.getChildByName("goods_icon").getComponent(Sprite).spriteFrame = LoadUtils.Instance.goods_list.find(item => item.name == this.staff_info.piece_goods_id)
             upgrade_cost_2.getChildByName("num").getComponent(RichText).string = `<color=${piece_num < this.upgrade_cost.cost_2 ? "#d04c42" : "ffffff"}><outline color=#000000 width=2>${piece_num_format}</outline></color><outline color=#000000 width=2>/${this.upgrade_cost.cost_2}</outline>`
             // 通过资源数量判断升级按钮是否可用
-            if (GameData.userData.hasGoodsList[1] < this.upgrade_cost.cost_1 
+            if (GameData.userData.hasGoodsList[1] < this.upgrade_cost.cost_1
                 || GameData.userData.towerDebris[this.staff_info.piece_goods_id] < this.upgrade_cost.cost_2) {
                 // 禁用升级按钮
                 this.upgrade_btn.getComponent(Button).interactable = false
@@ -352,7 +362,7 @@ export class staffInfoController extends Component {
                 //刷新主界面红点
                 find("Canvas").getComponent(MainUIControllers).updateRedDot();
             }
-            EventManager.Instance.emit(EventConst.REFRESH_STAFF_INFO,this.staff_info.id);
+            EventManager.Instance.emit(EventConst.REFRESH_STAFF_INFO, this.staff_info.id);
         }
     }
 
@@ -380,7 +390,7 @@ export class staffInfoController extends Component {
 
         // 减少资源
         GameData.userData.hasGoodsList[1] -= this.upgrade_cost.cost_1
-        GameData.taskData.dailyTaskContentNumList[6]+=this.upgrade_cost.cost_1;
+        GameData.taskData.dailyTaskContentNumList[6] += this.upgrade_cost.cost_1;
         GameData.userData.towerDebris[this.staff_info.piece_goods_id] -= this.upgrade_cost.cost_2
 
         if (this.audio_manager) {
@@ -392,9 +402,8 @@ export class staffInfoController extends Component {
         //跟新每日任务
         GameData.taskData.dailyTaskContentNumList[2]++;
         //更新循环任务
-        let id = GameData.taskData.continuousTaskId%TextUtils.Instance.task__get_continuous_task.length
-        if(id == 2)
-        {
+        let id = GameData.taskData.continuousTaskId % TextUtils.Instance.task__get_continuous_task.length
+        if (id == 2) {
             GameData.taskData.continueTaskContentNumList[id]++;
             EventManager.Instance.emit(EventConst.UPDATE_CONTINUOUS_TASK)
         }
@@ -434,7 +443,7 @@ export class staffInfoController extends Component {
         //         }
         //     }
         // })
-        
+
         // tower_info.atk += this.cumulativeAttrBonus.atk
         // tower_info.poison += this.cumulativeAttrBonus.poison
 
@@ -448,7 +457,7 @@ export class staffInfoController extends Component {
         this.updateUI()
         let MainTop = find("Canvas").getChildByName("MainTop");
         MainTop.getComponent(GameApp).updateplayerinfo();
-        
+
         // 标记已经进行了升级
         this.is_upgrade = true
     }

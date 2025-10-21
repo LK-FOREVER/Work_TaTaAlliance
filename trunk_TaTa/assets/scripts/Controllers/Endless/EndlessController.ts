@@ -6,11 +6,14 @@ import { EndlessRewardItemController } from './EndlessRewardItemController';
 import EventManager from '../../Common/EventManager';
 import { EventConst } from '../../Common/EventConst';
 import { MainUIControllers } from '../MainUI/MainUIControllers';
+import { EndlessChooseItemController } from './EndlessChooseItemController';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('EndlessController')
 export class EndlessController extends Component {
+    @property(Prefab)
+    endless_choose_item: Prefab = null;
     @property(Prefab)
     endless_rank_item: Prefab = null;
     @property(Prefab)
@@ -36,9 +39,13 @@ export class EndlessController extends Component {
     endless_reward_red_dot: Node = null;
     score: Node = null;
     score_num: Node = null;
-    survive:Node = null;
+    survive: Node = null;
     survive_num: Node = null;
-    challenge_btn:Node = null;
+    challenge_btn: Node = null;
+    choose_btn: Node = null;
+    choose_num: Node = null;
+    choose_page: Node = null;
+    choose_content: Node = null;
 
     // 是否在回调中，避免循环调用
     is_call_back: boolean = true;
@@ -83,6 +90,12 @@ export class EndlessController extends Component {
         this.challenge_btn = this.endless_challenge_page.getChildByName("challenge_btn");
         this.challenge_btn.on(Button.EventType.CLICK, this.onChallengeBtn, this);
 
+        this.choose_btn = this.endless_challenge_page.getChildByName("choose_level").getChildByName("choose").getChildByName("choose_btn");
+        this.choose_btn.on(Button.EventType.CLICK, this.onChooseBtn, this);
+        this.choose_num = this.endless_challenge_page.getChildByName("choose_level").getChildByName("choose").getChildByName("choose_num");
+        this.choose_page = this.endless_challenge_page.getChildByName("choose_page");
+        this.choose_content = this.choose_page.getChildByName("choose_list").getChildByName("choose_view").getChildByName("choose_content");
+
         this.ranking_list_page.active = false;
         this.endless_challenge_page.active = true;
         this.reward_page.active = false;
@@ -96,13 +109,16 @@ export class EndlessController extends Component {
     }
 
     // 点击开始挑战按钮
-    onChallengeBtn(){
+    onChallengeBtn() {
         GameData.userData.isEndlessBattleScene = true;
         GameData.battleData.TowerObj.length = 0; //清空上阵员工
         GameData.setUserData();
         find("Canvas").getComponent(MainUIControllers).goBattle();
     }
-
+    // 点击选择关卡按钮
+    onChooseBtn() {
+        this.choose_page.active = !this.choose_page.active;
+    }
     updateUI() {
         this.initRankingListPage();
         this.initEndlessChallengePage();
@@ -192,9 +208,21 @@ export class EndlessController extends Component {
     }
 
     //初始化无尽挑战界面
-    initEndlessChallengePage() { 
+    initEndlessChallengePage() {
+        this.choose_page.active = false;
         this.score_num.getComponent(Label).string = GameData.userData.endlessChallengeMaxScore.toString();
         this.survive_num.getComponent(Label).string = GameData.userData.endlessChallengeMaxSurvive.toString();
+        this.choose_num.getComponent(Label).string = "1";
+        GameData.userData.endlessChooseSurvive = 1;
+        // 每20关设置一个关卡选择,只显示1,21,41,61...
+        const survive = Math.max(1, GameData.userData.endlessChallengeMaxSurvive);
+        const choose_level_num = Math.floor((survive - 1) / 20) + 1;
+        this.choose_content.removeAllChildren();
+        for(let i = 1;i <= choose_level_num;i++){
+            let choose_item = instantiate(this.endless_choose_item);
+            choose_item.getComponent(EndlessChooseItemController).init(i, this.choose_num);
+            this.choose_content.addChild(choose_item);
+        }
     }
 
     //初始化奖励界面

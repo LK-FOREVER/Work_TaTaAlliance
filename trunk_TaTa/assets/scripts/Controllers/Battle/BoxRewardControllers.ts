@@ -123,7 +123,8 @@ export class BoxRewardControllers extends Component {
         let reward_list = GameData.battleData.BoxRewardList;
         for (let index = 0; index < reward_list.length; index++) {
             const element = reward_list[index];
-            element.number = element.number * 3;
+            // element.number = element.number * 3;
+            element.number = element.number;
         }
 
         if (reward_list.length != 0) {

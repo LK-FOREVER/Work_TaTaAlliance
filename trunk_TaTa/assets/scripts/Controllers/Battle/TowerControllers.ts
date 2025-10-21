@@ -66,8 +66,9 @@ export class TowerControllers extends Component {
         this.upgradation = this.node.getChildByName("upgradation")
         this.upgradation.active = false
         this.tips = this.node.getChildByName("tips");
+        this.tips.active = true;
         const lv: number = GameData.userData.towerLv[towerinfo.icon_id];
-        this.tips.getComponent(Label).string = "LV." + lv;
+        this.tips.getComponent(Label).string = "等级：" + lv;
 
         //攻击速度
         this.atkSpeed = towerinfo.atk_spd;
@@ -120,6 +121,7 @@ export class TowerControllers extends Component {
 
         // 将要移动的节点层级增加 移动过程中在最上层
         this.node.setSiblingIndex(targetIndex + 10);
+        this.InitTowerInfo();
     }
     //移动过程
     _touchmove(touchEvent) {
@@ -138,15 +140,42 @@ export class TowerControllers extends Component {
         this.range.active = false;
         let location = touchEvent.getUILocation();
         let pos = v3(location.x, location.y, 0)
-        this.node.position = this.node.parent.getComponent(UITransform).convertToNodeSpaceAR(pos);
+        // 防护：parent 可能为 null 或没有 UITransform，避免直接调用导致异常
+        const parent = this.node.parent;
+        if (parent) {
+            const parentUI = parent.getComponent(UITransform);
+            if (parentUI) {
+                this.node.position = parentUI.convertToNodeSpaceAR(pos);
+            } else {
+                this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
+            }
+        } else {
+            this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
+        }
         // 将要移动的节点层级变为原层级
-        this.node.setSiblingIndex(this.targetIndex);
+        if (this.node && this.node.isValid && this.node.parent) {
+            const parent = this.node.parent;
+            if (parent && parent.isValid) {
+                this.node.setSiblingIndex(this.targetIndex);
+            }
+        }
 
         this.tips.active = true;
         //碰撞成功，此时松开手指
         if (this.isTarget) {
+            // 检查节点有效性
+            if (!this.node || !this.node.isValid || !GameData.battleData.TowerObj[this.build_id]) {
+                this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
+                return;
+            }
             //已建造战斗体中包含此数据,并且不是该战斗体，进行交换
             if (GameData.battleData.TowerObj[this.build_id] != null && GameData.battleData.TowerObj[this.build_id].name != this.tower_data.name) {
+                // 检查目标节点有效性
+                const targetTower = GameData.battleData.TowerObj[this.build_id];
+                if (!targetTower || !targetTower.name) {
+                    this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
+                    return;
+                }
                 //交换对象
                 let other_tower = GameData.battleData.TowerObj[this.build_id]
 
@@ -377,7 +406,10 @@ export class TowerControllers extends Component {
         if (index != this.tower_data.staff_type_id) return;
 
         this.attack_tw?.stop();
-        this.tower_data.atk += num;
+        // this.tower_data.atk += num;
+        //如果该角色没有在站位中，就不播放升级动画
+        const battleTower = BattleManager.Instance.tower_root.getChildByName('tower' + this.tower_data.build_id);
+        if (!battleTower) return;
 
         // 检查 upgradation 节点是否有效
         if (!this.upgradation || !this.upgradation.isValid) {
@@ -430,6 +462,72 @@ export class TowerControllers extends Component {
                 console.error("FontVFXController component not found!");
             }
         });
+    }
+
+    InitTowerInfo() {
+        if (!this.node || !this.node.isValid) return;
+        if (this.node) {
+            const infoPanel = this.node.getChildByName("info_panel");
+            if (!infoPanel) return;
+            if (infoPanel) {
+                if(infoPanel.active) {
+                    infoPanel.active = false;
+                    return;
+                }
+                // 先强制关闭面板
+                infoPanel.active = false;
+
+                // 等待一帧后再重新激活
+                this.scheduleOnce(() => {
+                    if (!this.node || !this.node.isValid) return;
+                    infoPanel.active = true;
+
+                    // 基本安全赋值（先判断路径与数据存在）
+                    const bg = infoPanel.getChildByName("bg");
+                    if (bg) {
+                        const nameLabel = bg.getChildByName("Name")?.getComponent(Label);
+                        if (nameLabel) nameLabel.string = this.tower_data?.name ?? "";
+
+                        const levelLabel = bg.getChildByName("LevelNum")?.getComponent(Label);
+                        if (levelLabel) {
+                            const lvMap = GameData?.userData?.towerLv;
+                            levelLabel.string = (lvMap && typeof lvMap[this.tower_data?.id] !== 'undefined') ? String(lvMap[this.tower_data.id]) : "0";
+                        }
+                    }
+
+                    // 遍历已保存的 TowerObj，跳过 null/undefined 条目
+                    const towerObjs = GameData?.battleData?.TowerObj || [];
+                    for (let index = 0; index < towerObjs.length; index++) {
+                        const tower_data = this.tower_data;
+                        if (!tower_data) continue;
+                        if (tower_data.id === this.tower_data?.id) {
+                            // 赋值时均做存在性检查
+                            const atkLabel = bg?.getChildByName("AtkNum")?.getComponent(Label);
+                            const contAtkLabel = bg?.getChildByName("ContinueAtkNum")?.getComponent(Label);
+                            const heavyLabel = bg?.getChildByName("HeavyAtkNum")?.getComponent(Label);
+                            const heavyProbLabel = bg?.getChildByName("HeavyAtkProbabilityNum")?.getComponent(Label);
+                            const intensifyLabel = bg?.getChildByName("IntensifyNum")?.getComponent(Label);
+
+                            const batteryLv = GameData?.userData?.[`batteryStrengthenLv${this.tower_data?.staff_type_id}`] ?? 0;
+
+                            if (atkLabel) atkLabel.string = String((tower_data.atk ?? 0) + 1 * batteryLv);
+                            if (contAtkLabel) contAtkLabel.string = String((tower_data.poison ?? 0) + (tower_data.poi_grow ?? 0) * batteryLv);
+                            if (heavyLabel) heavyLabel.string = (typeof tower_data.crit_hurt === 'number') ? tower_data.crit_hurt.toFixed(2) : "0.00";
+                            if (heavyProbLabel) heavyProbLabel.string = (typeof tower_data.crit === 'number') ? (tower_data.crit * 100).toFixed(0) + "%" : "0%";
+                            if (intensifyLabel) intensifyLabel.string = String(batteryLv);
+                            break;
+                        }
+                    }
+
+                    // 根据防御塔位置调整信息面板位置，避免超出屏幕
+                    if (this.node.position.x > 100) {
+                        infoPanel.setPosition(new Vec3(-300, infoPanel.position.y, 0));
+                    } else {
+                        infoPanel.setPosition(new Vec3(infoPanel.position.x, infoPanel.position.y, 0));
+                    }
+                }, 0);
+            }
+        }
     }
 
     update(deltaTime: number) {

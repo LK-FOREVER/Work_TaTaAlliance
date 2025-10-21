@@ -1,4 +1,4 @@
-import {_decorator,Component,Node,resources,JsonAsset,error,Label,RichText,ProgressBar,NodeEventType,find,Sprite,Button,Slider,instantiate,Prefab,v3,director, Vec3} from 'cc';
+import {_decorator,Component,Node,resources,JsonAsset,error,Label,RichText,ProgressBar,NodeEventType,find,Sprite,Button,Slider,instantiate,Prefab,v3,director, Vec3, Color} from 'cc';
 const { ccclass, property } = _decorator;
 import { GameData } from '../Common/GameData';
 import { MessageManager } from './MessageManager';
@@ -199,8 +199,11 @@ export class PromotionManager extends Component {
             this.now_career.getChildByName("Label").getComponent(Label).string = this.nowPromotionInfo.position_lv_name
             this.now_career.getChildByName("Label").setPosition(new Vec3(0, 0, 0))
             this.next_career.active = false
-            this.reward_text0.getChildByName("Label").getComponent(Label).string = ""
-            this.reward_text1.getChildByName("Label").getComponent(Label).string = ""
+            this.reward_text0.getChildByName("Label").getComponent(Label).string = "已领取全部奖励"
+            this.reward_text1.getChildByName("Label").getComponent(Label).string = "已领取全部奖励"
+            //设置成白色
+            this.reward_text0.getChildByName("Label").getComponent(Label).color = new Color(255, 255, 255, 255)
+            this.reward_text1.getChildByName("Label").getComponent(Label).color = new Color(255, 255, 255, 255)
             this.promotion_btn.getComponent(Sprite).grayscale = true
             this.promotion_btn.getComponent(Button).interactable = false
             this.promotion_btn.getChildByName("Label").getComponent(Label).string = "已满级"

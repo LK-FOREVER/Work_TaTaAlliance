@@ -82,6 +82,10 @@ export class AudioManager {
             this._sounds[i].volume =
                 this._sound_muted == 1 ? 0 : this._sound_volume;
         }
+        //设置bgm音量
+        this.setMusicVolume(GameData.userData.audioMusic);
+        //设置sound音量
+        this.setSoundVolume(GameData.userData.audioSound);
     }
 
     /**

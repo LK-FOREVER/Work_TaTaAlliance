@@ -1,4 +1,4 @@
-import {_decorator,Component,Node,resources,JsonAsset,error,Label,RichText,ProgressBar,NodeEventType,find,Sprite,Button,Slider,instantiate,Prefab,v3,director} from 'cc';
+import { _decorator, Component, Node, resources, JsonAsset, error, Label, RichText, ProgressBar, NodeEventType, find, Sprite, Button, Slider, instantiate, Prefab, v3, director } from 'cc';
 const { ccclass, property } = _decorator;
 import { AudioManager } from './AudioManager';
 import { GameData } from '../Common/GameData';
@@ -15,7 +15,11 @@ export class SetManager extends Component {
     sound_slider_com: Slider;
     sound_progress: ProgressBar;
     audioMgr: AudioManager;
-    set_close:Node = null;
+    set_close: Node = null;
+    Login_out: Node = null;//退出登录
+    tip_box: Node = null;//提示框
+    button_ok: Node = null;//提示框 确定按钮
+    button_cancel: Node = null;//提示框 取消按钮
 
     start() {
         this.audioMgr = AudioManager.ins;
@@ -34,6 +38,33 @@ export class SetManager extends Component {
         this.sound_slider = this.sound.getChildByName('Slider');
         this.sound_slider_com = this.sound_slider.getComponent(Slider);
         this.sound_progress = this.sound_slider.getComponent(ProgressBar);
+        this.tip_box = this.node.getChildByName("tip_box");
+        this.button_ok = this.tip_box.getChildByName("container").getChildByName("confirm");
+        this.button_cancel = this.tip_box.getChildByName("container").getChildByName("cancel");
+        this.tip_box.active = false;
+        this.Login_out = this.node.getChildByName("Login_out");
+        this.Login_out.on(NodeEventType.TOUCH_END, () => {
+            //点击退出登录
+            this.tip_box.active = true;
+        })
+        this.button_ok.on(NodeEventType.TOUCH_END, () => {
+            //退出登录
+            GameData.setUserData();
+            director.preloadScene("Login",
+                (completedCount: number, totalCount: number, item: any) => { },
+                () => {
+                    if (!this.audioMgr) {
+                        this.audioMgr = AudioManager.ins;
+                    }
+                    this.audioMgr.stopMusic();
+                    this.audioMgr.stopAllSound();
+                    director.loadScene("Login");
+                });
+        })
+        this.button_cancel.on(NodeEventType.TOUCH_END, () => {
+            //取消退出登录
+            this.tip_box.active = false;
+        })
 
         this.music_progress.progress = GameData.userData.audioMusic;
         this.sound_progress.progress = GameData.userData.audioSound;
@@ -44,7 +75,7 @@ export class SetManager extends Component {
         this.sound_slider_com!.node.on('slide', this.soundCall, this);
 
         this.set_close = this.node.getChildByName("set_close");
-        this.set_close.on(NodeEventType.TOUCH_END, () =>{
+        this.set_close.on(NodeEventType.TOUCH_END, () => {
             this.node.active = false;
         })
     }

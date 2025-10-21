@@ -209,7 +209,7 @@ export class BattleManager extends Component {
             this.initEndlessPauseView();
             this.initEndlessStopBtn();
             this.Box.active = false;
-             this.node.getChildByName("btn_go_MainUI").active = false;
+            this.node.getChildByName("btn_go_MainUI").active = false;
         }
         this.listen();
         if (GameData.userData.guidanceId !== -1) {
@@ -256,17 +256,31 @@ export class BattleManager extends Component {
         this.chapterEnemyData = TextUtils.Instance.chapter__get_chapter_enemy_data;
 
         if (GameData.userData.isEndlessBattleScene) {
-            this.chapter_id = 1;
-            GameData.userData.endlessChapter = 1;
+            this.chapter_id = GameData.userData.endlessChooseSurvive > 200 ? GameData.userData.endlessChooseSurvive % 200 : GameData.userData.endlessChooseSurvive; //无尽挑战所选择的关卡
+            GameData.userData.endlessChapter = this.chapter_id;
         } else {
             this.chapter_id = GameData.userData.chapter; //当前关卡
+            // 每次进入普通挑战时，清空上阵数组，保证所有角色处于待选状态（不会在地图站位）
+            try {
+                if (GameData.battleData && Array.isArray(GameData.battleData.TowerObj)) {
+                    GameData.battleData.TowerObj.length = 0;
+                } else {
+                    GameData.battleData = GameData.battleData;
+                    GameData.battleData.TowerObj = [];
+                }
+                GameData.setBattleData();
+            } catch (e) {
+                console.warn("clear TowerObj on enter normal mode failed:", e);
+            }
         }
     }
 
     //设置当前关卡敌人信息
     setEnemyData() {
         const chapterInfo = this.chapterData[this.chapter_id - 1][this.chapter_id - 1]
-
+        if (GameData.userData.isEndlessBattleScene) {
+            this.current_survive_num = GameData.userData.endlessChooseSurvive - 1; //当前存活波数
+        }
         //当前关卡敌人数值
         this.enemy_list = [];
 
@@ -395,12 +409,12 @@ export class BattleManager extends Component {
         const chapterInfo = this.chapterData[this.chapter_id - 1][this.chapter_id - 1]
 
         this.map_id = chapterInfo.map;
-        if(GameData.userData.isEndlessBattleScene) {
-            if(this.map_id - 6 < 0) {
-               this.map_id = Math.abs(this.map_id - 6);
+        if (GameData.userData.isEndlessBattleScene) {
+            if (this.map_id - 6 < 0) {
+                this.map_id = Math.abs(this.map_id - 6);
             }
         }
-        
+
 
         this.map = null;
         this.map_root.removeAllChildren();
@@ -620,11 +634,11 @@ export class BattleManager extends Component {
     //缓存战位生成防御塔战斗体
     ctorTowerObj() {
         let ObjList = GameData.battleData.TowerObj;  //已上阵员工
-        if(GameData.userData.isEndlessBattleScene && GameData.userData.endlessChapter == 1) { //无尽模式
-           ObjList.length = 0;
-        }   
+        // if (GameData.userData.isEndlessBattleScene && GameData.userData.endlessChapter == 1) { //无尽模式
+        //     ObjList.length = 0;
+        // }
         let tower_list = GameData.userData.towerlist;
-       
+
         for (let index = 0; index < ObjList.length; index++) {
             if (ObjList[index]) {
                 ObjList[index] = tower_list.find(item => item.id == ObjList[index].id);  //重置员工数据
@@ -811,8 +825,9 @@ export class BattleManager extends Component {
         this.calculate_lv_grow_add([data]);
         this.calculate_lv_extra_add([data]);
         this.setFurnitureAdd([data]);
-        this.calculate_total_enhancement_bonus([data]);
+        // this.calculate_total_enhancement_bonus([data]);
         this.calculate_office_artifact_bonus([data]);
+        console.log("上阵防御塔数据 -->", JSON.stringify(data));
 
         resources.load("prefabs/towers/towers", Prefab, (err, prefab) => {
             if (this.audioMgr) {
@@ -863,13 +878,12 @@ export class BattleManager extends Component {
         }
         //获取已有防御塔数据
         let BattleTowerList = GameData.battleData.TowerObj;
-       
+
         //所有已拥有员工
         GameData.battleData.WaitTowerList = JSON.parse(JSON.stringify(GameData.userData.towerlist));
 
         //  let WaitTowerList = JSON.parse(JSON.stringify(GameData.battleData.WaitTowerList));
         this.waittowerlist = GameData.battleData.WaitTowerList;
-
         //未上阵员工 从所有员工中剔除上阵员工
         for (let index = 0; index < this.waittowerlist.length; index++) {
             const wait_tower = this.waittowerlist[index];
@@ -888,7 +902,7 @@ export class BattleManager extends Component {
         this.calculate_lv_extra_add(this.waittowerlist);
         this.calculate_lv_grow_add(this.waittowerlist);
         this.setFurnitureAdd(this.waittowerlist);
-        this.calculate_total_enhancement_bonus(this.waittowerlist);
+        // this.calculate_total_enhancement_bonus(this.waittowerlist);
         this.calculate_office_artifact_bonus(this.waittowerlist);
 
         this.waittowerlist = this.sortWaittowerList(this.waittowerlist);
@@ -1006,6 +1020,8 @@ export class BattleManager extends Component {
 
         this.towersWaitList[index].addChild(tower);
         tower.position = v3(0, 0, 0);
+        let tower_info_panel = tower.getChildByName("info_panel");
+        tower_info_panel.active = false;
 
         let tower_ctr = tower.getChildByName("icon").addComponent(TouchCtorControllers);
         tower_ctr.init(index, data);
@@ -1028,17 +1044,15 @@ export class BattleManager extends Component {
             const originalWidth = staffIntoBattleUITransform.contentSize.width;
             const screenWidth = view.getVisibleSize().width;
             const scale = screenWidth / originalWidth;
-            if(scale<1)
-            {
-                 staff_into_battle.scale = new Vec3(scale, scale, 1);
-                 this.total_enhancement.scale = new Vec3(scale*0.9, scale*0.9, 1);
+            if (scale < 1) {
+                staff_into_battle.scale = new Vec3(scale, scale, 1);
+                this.total_enhancement.scale = new Vec3(scale * 0.9, scale * 0.9, 1);
             }
-            else
-            {
+            else {
                 this.total_enhancement.scale = new Vec3(0.9, 0.9, 1);
             }
         }
-       
+
         this.btn_box = this.total_enhancement.getChildByName("btn_box")
         this.enhance_btn = this.total_enhancement.getChildByName("enhance_btn")
         this.battery_progress_bar = this.total_enhancement.getChildByName("battery_progress_bar")
@@ -1053,9 +1067,9 @@ export class BattleManager extends Component {
         })
 
         // 初始化强化按钮
-        this.btn_box.children.forEach(child => {
-            child.on(Button.EventType.CLICK, this.batteryStrengthenLvBtnHandler, this)
-        })
+        // this.btn_box.children.forEach(child => {
+        //     child.on(Button.EventType.CLICK, this.batteryStrengthenLvBtnHandler, this)
+        // })
         this.enhance_btn.on(Button.EventType.CLICK, this.batteryStrengthenBtnHandler, this)
         this.battery_progress_bar.on(Node.EventType.TOUCH_END, () => {
             this.power_supply.active = true
@@ -1088,7 +1102,9 @@ export class BattleManager extends Component {
         const target: Node = event.target
         const target_index = target.getSiblingIndex()
         GameData.userData[`batteryStrengthenValue${target_index}`] -= 3
-        GameData.userData[`batteryStrengthenLv${target_index}`] += this.chapterData[this.chapter_id - 1][this.chapter_id - 1].atk_add
+        // GameData.userData[`batteryStrengthenLv${target_index}`] += this.chapterData[this.chapter_id - 1][this.chapter_id - 1].atk_add
+        GameData.userData[`batteryStrengthenLv${target_index}`] += 1
+
 
         EventManager.Instance.emit(EventConst.UPGRADE, target_index, this.chapterData[this.chapter_id - 1][this.chapter_id - 1].atk_add);
 
@@ -1139,13 +1155,26 @@ export class BattleManager extends Component {
                 break;
         }
         // 音效
-        const audioSource = enhance_light.getComponent(AudioSource).clip
-        enhance_light.getComponent(AudioSource).playOneShot(audioSource)
+        // const audioSource = enhance_light.getComponent(AudioSource).clip
+        // enhance_light.getComponent(AudioSource).playOneShot(audioSource)
+        if (this.audioMgr) {
+            this.audioMgr.playSound("battle_bottom_shot", false);
+        }
         // 动画播放完成回调
         enhance_light.getComponent(sp.Skeleton).setCompleteListener(() => {
             this.updateBatteryStrengthen()
         })
+        if (GameData.userData[`batteryStrengthenValue${randomIndex}`] >= 3) {
+            GameData.userData[`batteryStrengthenValue${randomIndex}`] -= 3
+            // GameData.userData[`batteryStrengthenLv${randomIndex}`] += this.chapterData[this.chapter_id - 1][this.chapter_id - 1].atk_add
+            GameData.userData[`batteryStrengthenLv${randomIndex}`] += 1
 
+
+            EventManager.Instance.emit(EventConst.UPGRADE, randomIndex, this.chapterData[this.chapter_id - 1][this.chapter_id - 1].atk_add);
+
+            this.updateBatteryStrengthen()
+
+        }
         GameData.setUserData()
     }
     updateBatteryStrengthen() {
@@ -1175,7 +1204,7 @@ export class BattleManager extends Component {
         this.survive_num = this.endless_record.getChildByName("survive_num").getChildByName("num");
         this.kill_enemy_num.getComponent(Label).string = "0";
         this.get_score_num.getComponent(Label).string = "0";
-        this.survive_num.getComponent(Label).string = "0"
+        this.survive_num.getComponent(Label).string = (GameData.userData.endlessChooseSurvive - 1).toString(); // 无尽模式初始存活波次
     }
     // 无尽模式暂停按钮
     initEndlessStopBtn() {
@@ -1213,6 +1242,8 @@ export class BattleManager extends Component {
             this.endless_stop_view.active = false;
             this.new_record.active = false;
             this.is_end = true;
+            GameData.userData.isEndlessBattleScene = true;
+
             director.preloadScene("Battle",
                 (completedCount: number, totalCount: number, item: any) => { },
                 () => {
@@ -1312,8 +1343,12 @@ export class BattleManager extends Component {
             //无尽模式，通关一章节，存活波数加1
             if (GameData.userData.isEndlessBattleScene) {
                 this.current_survive_num++;
+                GameData.userData.endlessChooseSurvive++;
                 GameData.userData.endlessChapter++;
                 this.survive_num.getComponent(Label).string = `${this.current_survive_num}`;
+                console.log("this.current_survive_num", this.current_survive_num);
+                console.log("this.endlessChooseSurvive", GameData.userData.endlessChooseSurvive);
+
                 this.left_survive_num.getComponent(Label).string = `${this.current_survive_num}`;
                 if (GameData.userData.endlessChallengeMaxSurvive <= this.current_survive_num) {
                     GameData.userData.endlessChallengeMaxSurvive = this.current_survive_num;
@@ -1368,29 +1403,28 @@ export class BattleManager extends Component {
                 }
             }
 
-            if(!GameData.userData.isEndlessBattleScene) {
+            if (!GameData.userData.isEndlessBattleScene) {
                 //实例化预制体
                 resources.load("prefabs/battle/battle_win", Prefab, (err, prefab) => {
-                if (this.audioMgr) {
-                    this.audioMgr.playSound("battle_win", false);
-                }
-                this.hint = instantiate(prefab);
-                this.hint.addComponent(BattleResultControllers);
+                    if (this.audioMgr) {
+                        this.audioMgr.playSound("battle_win", false);
+                    }
+                    this.hint = instantiate(prefab);
+                    this.hint.addComponent(BattleResultControllers);
 
-                // this.hint.getComponent(BattleResultControllers).setReward();
-                this.node.addChild(this.hint);
-                this.hint.position = v3(0, 0, 0);
-                //播放音效
-                if (this.audioMgr) {
-                    this.audioMgr.playSound("get_goods", false);
-                }
-                // this.scheduleOnce(() => {
-                //     this.toNextChapter();
-                // }, 5);
+                    // this.hint.getComponent(BattleResultControllers).setReward();
+                    this.node.addChild(this.hint);
+                    this.hint.position = v3(0, 0, 0);
+                    //播放音效
+                    if (this.audioMgr) {
+                        this.audioMgr.playSound("get_goods", false);
+                    }
+                    // this.scheduleOnce(() => {
+                    //     this.toNextChapter();
+                    // }, 5);
                 });
             }
-            else
-            {
+            else {
                 this.toNextChapter();
             }
         } else {//敌人还有存活并且到达终点，失败
@@ -1675,6 +1709,7 @@ export class BattleManager extends Component {
     //全体禁锢
     onAdAllStop() {
         let allstop = () => {
+
             for (let index = 0; index < this.enemys.length; index++) {
                 const enemy = this.enemys[index];
                 let ctrl = enemy.getComponent(EnemyControllers);

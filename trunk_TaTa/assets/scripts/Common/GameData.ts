@@ -44,7 +44,7 @@ export class GameData extends Component {
         use_id: "null", //用户ID
         player_id: "", //用户id
         head_icon: "6001", //头像id
-        age:"0", //年龄
+        age: "0", //年龄
         create_nickname: false, //是否创建过昵称
         play_comic: false, //是否播放过漫画
         play_comic_num: 0, //播放第几张漫画
@@ -118,7 +118,8 @@ export class GameData extends Component {
         endlessChallengeMaxScore: 0, //无尽挑战最高积分
         endlessChallengeMaxSurvive: 0, //无尽挑战最高存活波数
         endlessLikeCount: 3, //无尽挑战每天的点赞次数
-        endlessChapter:0,//无尽挑战关卡数
+        endlessChapter: 1,//无尽挑战关卡数
+        endlessChooseSurvive: 1,//无尽挑战所选择的波数
         endlessRewardStatus: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 无尽挑战，奖励状态    0：未领取  1：已领取
         // 电量强化值
         batteryStrengthenValue0: 0,//单体型强化值
@@ -132,8 +133,8 @@ export class GameData extends Component {
         batteryStrengthenLv3: 0,//持续型等级
         // 娃娃机等级
         doll_machine_lv: 1,//娃娃机等级
-        friend_added_num:0,//加过几个好友（添加每个好友id的唯一性）
-        cost_money_month:0, //累积消费额度
+        friend_added_num: 0,//加过几个好友（添加每个好友id的唯一性）
+        cost_money_month: 0, //累积消费额度
         // 拥有的装备列表
         // 通过装备类型分组，每个装备类型存的值为装备的信息
         // 0: 单体型，1：群体型，2：控制型，3：持续型
@@ -302,7 +303,7 @@ export class GameData extends Component {
         },
         //拥有员工列表
         towerlist: [
-            { "id": 1001, "name": "埃里克", "english_name": "Poseidon", "hurttype": "持续型", "staff_type_id": 3, "quality": 6, "max_lv": 100, "piece_goods_id": 2001, "icon_id": 1001, "draw_id": 3001, "voice_id": 4001, "pub_id": 5001, "spine_id": "spine_1001", "idle_id": "idle_1001", "attack_id": "attack_1001", "atk": 5, "atk_base": 5, "atk_grow": 10, "bullet_spd": 1250, "atk_spd": 0.5, "range": 400, "radius": 0, "crit": 0.05, "crit_hurt": 1.05, "poison": 4, "poison_base": 4, "poi_grow": 8, "duration": 2, "slow": 0, "slow_time": 0, "is_return": 0, "build_id": 0, "introduce": "" },
+            { "id": 1001, "name": "埃里克", "english_name": "Poseidon", "hurttype": "持续型", "staff_type_id": 3, "quality": 6, "max_lv": 100, "piece_goods_id": 2001, "icon_id": 1001, "draw_id": 3001, "voice_id": 4001, "pub_id": 5001, "spine_id": "spine_1001", "idle_id": "idle_1001", "attack_id": "attack_1001", "atk": 5, "atk_base": 5, "atk_grow": 10, "bullet_spd": 1250, "atk_spd": 0.5, "range": 400, "radius": 0, "crit": 0.05, "crit_hurt": 1.05, "poison": 4, "poison_base": 4, "poi_grow": 1, "duration": 2, "slow": 0, "slow_time": 0, "is_return": 0, "build_id": 0, "introduce": "" },
             { "id": 1002, "name": "艾莉安娜", "english_name": "White Impermanence", "hurttype": "单体型", "staff_type_id": 0, "quality": 4, "max_lv": 100, "piece_goods_id": 2002, "icon_id": 1002, "draw_id": 3002, "voice_id": 4002, "pub_id": 5002, "spine_id": "spine_1002", "idle_id": "idle_1002", "attack_id": "attack_1002", "atk": 10, "atk_base": 10, "atk_grow": 20, "bullet_spd": 1250, "atk_spd": 0.5, "range": 400, "radius": 0, "crit": 0.1, "crit_hurt": 1.05, "poison": 0, "poison_base": 0, "poi_grow": 0, "duration": 0, "slow": 0, "slow_time": 0, "is_return": 0, "build_id": 0, "introduce": "" },
             { "id": 1005, "name": "雷欧娜", "english_name": "Athena", "hurttype": "群体型", "staff_type_id": 1, "quality": 5, "max_lv": 100, "piece_goods_id": 2005, "icon_id": 1005, "draw_id": 3005, "voice_id": 4005, "pub_id": 5005, "spine_id": "spine_1005", "idle_id": "idle_1005", "attack_id": "attack_1005", "atk": 3, "atk_base": 3, "atk_grow": 6, "bullet_spd": 1250, "atk_spd": 1, "range": 300, "radius": 100, "crit": 0.05, "crit_hurt": 1.05, "poison": 0, "poison_base": 0, "poi_grow": 0, "duration": 0, "slow": 0, "slow_time": 0, "is_return": 0, "build_id": 0, "introduce": "" },
             { "id": 1008, "name": "石心", "english_name": "Inferno Judge", "hurttype": "控制型", "staff_type_id": 2, "quality": 5, "max_lv": 100, "piece_goods_id": 2008, "icon_id": 1008, "draw_id": 3008, "voice_id": 4008, "pub_id": 5008, "spine_id": "spine_1008", "idle_id": "idle_1008", "attack_id": "attack_1008", "atk": 4, "atk_base": 4, "atk_grow": 8, "bullet_spd": 1250, "atk_spd": 0.5, "range": 350, "radius": 0, "crit": 0.1, "crit_hurt": 1.05, "poison": 0, "poison_base": 0, "poi_grow": 0, "duration": 0, "slow": 0.15, "slow_time": 2, "is_return": 0, "build_id": 0, "introduce": "" },
@@ -423,28 +424,28 @@ export class GameData extends Component {
 
     //存储宝箱数据
     static setBoxReward(data) {
-        //宝箱为空则直接插入
         let reward_list = GameData.battleData.BoxRewardList;
-        if (GameData.battleData.BoxRewardList.length == 0) {
-            GameData.battleData.BoxRewardList.push(data);
-        } else {
-            //不为空则比较id加数值
-            for (let index = 0; index < reward_list.length; index++) {
-                const element = reward_list[index];
-                //相同加数值
-                if (data.reward == element.reward) {
-                    GameData.battleData.BoxRewardList[index].number =
-                        GameData.battleData.BoxRewardList[index].number +
-                        data.number;
-                } else {
-                    //不相同加id
-                    GameData.battleData.BoxRewardList.push(data);
-                }
+        let existingReward = reward_list.find(item => item.reward === data.reward);
+
+        if (existingReward) {
+            // 存在相同类型，累加数量
+            if (data.reward === 1) {
+                existingReward.number = Math.min(existingReward.number + data.number, 50000);
+            } else {
+                existingReward.number = Math.min(existingReward.number + data.number, 50);
             }
+        } else {
+            // 不存在相同类型，新增
+            if (data.reward === 1) {
+                data.number = Math.min(data.number, 50000);
+            } else {
+                data.number = Math.min(data.number, 50);
+            }
+            reward_list.push(data);
         }
-        //   console.log(GameData.battleData.BoxRewardList);
         GameData.setBattleData();
     }
+
 
     //初始15个已选择状态
     static setDefaultDecision() {

@@ -103,7 +103,7 @@ export class EnemyControllers extends Component {
         if (this.data.enemy_id == 103) {
             this.node.getChildByName("enemy").setScale(0.6, 0.6)
         }
-        
+
 
         this.is_moving = true;
     }
@@ -150,19 +150,17 @@ export class EnemyControllers extends Component {
     }
 
     //伤害飘字显示
-    hurtShow(lost: number, color: string = "#ffffff") {
-        //暴击伤害
+    hurtShow(lost: any, color: string = "#ffffff") {
+        // 暴击伤害
         if (this.is_crit) {
-            let str: string
-            str = 'Crit' + Number(lost.toFixed()) as unknown as string;
+            const str = 'Crit' + Math.round(lost).toString();
             resources.load("prefabs/font/crit_hurt", Prefab, (err, prefab) => {
                 const label = instantiate(prefab);
                 label.setParent(this.node)
                 label.getComponent(FontVFXController).init(str);
             })
-        } else {//普通伤害
-            let str: string
-            str = lost == 0 ? 'Miss' : '' + Number(lost.toFixed()) as unknown as string;
+        } else { // 普通伤害
+            const str = lost === 0 ? 'Miss' : Math.round(lost).toString();
             resources.load("prefabs/font/hurt", Prefab, (err, prefab) => {
                 const label = instantiate(prefab);
                 label.setParent(this.node)
@@ -200,9 +198,9 @@ export class EnemyControllers extends Component {
     }
 
     onHurt(tower_info) {
-        if (this.isdie || tower_info.atk <= 0) return;
-
-        let attack = tower_info.atk
+        if (this.isdie || !tower_info || tower_info.atk <= 0) return;
+        const batteryLv = GameData.userData[`batteryStrengthenLv${tower_info.staff_type_id}`] || 0;
+        let attack = tower_info.atk + 1 * batteryLv;
 
         this.is_crit = false;
         if (tower_info.crit != 0) {
@@ -289,12 +287,16 @@ export class EnemyControllers extends Component {
 
     //暴击伤害
     onCrit(tower_info) {
+        const batteryLv = GameData.userData[`batteryStrengthenLv${tower_info.staff_type_id}`] || 0;
         let rand = Math.floor(Math.random() * 100 + 1);
         if (rand <= tower_info.crit * 100) {
             this.is_crit = true;
-            return Math.floor(tower_info.atk * tower_info.crit_hurt);
+            let crit_hurt =  Math.floor((tower_info.atk + 1 * batteryLv) * tower_info.crit_hurt);
+            if(crit_hurt <=  Math.floor((tower_info.atk + 1 * batteryLv))) 
+                crit_hurt += 1; // 保证暴击伤害至少比普通伤害高1点
+            return crit_hurt;
         }
-        return tower_info.atk;
+        return tower_info.atk + 1 * batteryLv;
     }
 
     //中毒
@@ -306,7 +308,9 @@ export class EnemyControllers extends Component {
         //伤害次数
         let num = Math.floor(tower_info.duration / tower_info.atk_spd);
         this.schedule(() => {
-            this.onPoisonHurt(tower_info.poison);
+            const batteryLv = GameData.userData[`batteryStrengthenLv${tower_info.staff_type_id}`] || 0;
+            const poison_hurt = tower_info.poison + tower_info.poi_grow * batteryLv;
+            this.onPoisonHurt(poison_hurt);
         }, tower_info.atk_spd, num);
 
         this.scheduleOnce(() => {
@@ -316,7 +320,7 @@ export class EnemyControllers extends Component {
     }
     onPoisonHurt(attack: number) {
         if (this.isdie || attack <= 0) return;
-        let str: string = '' + Number(attack.toFixed()) as unknown as string;
+        const str = Math.round(attack).toString();
         resources.load("prefabs/font/poison_hurt", Prefab, (err, prefab) => {
             const label = instantiate(prefab);
             label.setParent(this.node)
@@ -387,6 +391,11 @@ export class EnemyControllers extends Component {
                 this.node.getChildByName("enemy").setScale(1, 1)
             } else {
                 this.node.getChildByName("enemy").setScale(-1, 1)
+            }
+        }
+        if (this.map_id == 3 || this.map_id == 11) {
+            if (this.data.enemy_id == 101) {
+                this.node.getChildByName("enemy").setScale(-0.3, 0.3)
             }
         }
 
