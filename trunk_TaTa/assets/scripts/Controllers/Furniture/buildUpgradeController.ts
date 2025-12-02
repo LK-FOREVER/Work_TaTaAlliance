@@ -151,6 +151,7 @@ export class buildUpgradeController extends Component {
                 this.upgrade_btn.getChildByName("common_red_dot").active = false
             }
         } else {
+            console.log("buildStatus:", this.buildStatus)
             this.build_upgrade.active = false;
         }
 

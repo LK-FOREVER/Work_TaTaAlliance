@@ -1,4 +1,4 @@
-import { _decorator, Component, director, EditBox, Node, resources, ProgressBar, sys, Button, Label, v3, JsonAsset, error,Size, SpriteFrame, native, Toggle, game, random, view, Vec2, Vec3, UITransform } from "cc";
+import { _decorator, Component, director, EditBox, Node, resources, ProgressBar, sys, Button, Label, v3, JsonAsset, error, Size, SpriteFrame, native, Toggle, game, random, view, Vec2, Vec3, UITransform } from "cc";
 import { Http } from "../../Common/Http";
 import { GameData } from "../../Common/GameData";
 import { AudioManager } from "../../Managers/AudioManager";
@@ -54,11 +54,8 @@ export class LoginController extends Component {
         LoginController.instance = this;
         //音频
         this.audioMgr = AudioManager.ins;
-        this.start_game =false;
-        this.audioMgr.init();
-        this.audioMgr.playMusic("mainui_bg", true);
+        this.start_game = false;
         this.timeController = LoginController.instance.node.parent.getChildByName("timer_controller").getComponent(TimeController);
-        AudioManager.SetButtonSound();
 
         //清除缓存
         // sys.localStorage.clear();
@@ -74,7 +71,7 @@ export class LoginController extends Component {
         // } else if (sys.isLittleEndian) {
         //     LoginController.isHttp = false;
         // }
-        if(sys.os === sys.OS.ANDROID || sys.isNative) {
+        if (sys.os === sys.OS.ANDROID || sys.isNative) {
             this.listen();
         }
     }
@@ -91,17 +88,17 @@ export class LoginController extends Component {
         let load_pro = layout_top.getChildByName("load_pro");
         let login_bg = layout_top.getChildByName("login_bg");
         let progressBar = load_pro.getChildByName("ProgressBar").getComponent(ProgressBar);
-         // 获取屏幕尺寸
+        // 获取屏幕尺寸
         const screenSize = view.getVisibleSize();
-         // 首先计算Bar(进度条图片的偏移量)
-        const offset = progressBar.node.getComponent(UITransform).contentSize.x - (screenSize.width* 0.8);
+        // 首先计算Bar(进度条图片的偏移量)
+        const offset = progressBar.node.getComponent(UITransform).contentSize.x - (screenSize.width * 0.8);
         //设置进度条的长度，为当前屏幕占比的80%减去进度条背景和进度条的宽度差
-        progressBar.node.getComponent(ProgressBar).totalLength = screenSize.width * 0.8-(progressBar.node.getComponent(UITransform).contentSize.x - progressBar.node.getChildByName("Bar").getComponent(UITransform).contentSize.x);
+        progressBar.node.getComponent(ProgressBar).totalLength = screenSize.width * 0.8 - (progressBar.node.getComponent(UITransform).contentSize.x - progressBar.node.getChildByName("Bar").getComponent(UITransform).contentSize.x);
         // 设置进度条背景的宽度为当前屏幕占比的80%
         progressBar.node.getComponent(UITransform).contentSize = new Size(screenSize.width * 0.8, progressBar.node.getComponent(UITransform).contentSize.y);
         //重新调整Bar的位置
-        progressBar.node.getChildByName("Bar").position = v3(progressBar.node.getChildByName("Bar").position.x + offset/2, progressBar.node.getChildByName("Bar").position.y, 0);
-        
+        progressBar.node.getChildByName("Bar").position = v3(progressBar.node.getChildByName("Bar").position.x + offset / 2, progressBar.node.getChildByName("Bar").position.y, 0);
+
         let sp = load_pro.getChildByName("ProgressBar").getChildByName("Bar").getChildByName("Sprite");
         let loading = layout_top.getChildByName("loading");
         let load_cpt = layout_top.getChildByName("load_cpt");
@@ -120,9 +117,9 @@ export class LoginController extends Component {
         //十秒后允许点击登录按钮
         setTimeout(() => {
             this.btn_login.getComponent(Button).interactable = true;
-            adult_notice.on(Node.EventType.TOUCH_END, ()=>{
-            notice_popup.active = true;
-        }, this);
+            adult_notice.on(Node.EventType.TOUCH_END, () => {
+                notice_popup.active = true;
+            }, this);
         }, 10000);
 
 
@@ -137,7 +134,7 @@ export class LoginController extends Component {
         this.btn_shiling.on(Button.EventType.CLICK, this.showShiling, this);
         let btn_shiling_confirm = this.shiling_view.getChildByName("btn_confirm");
         btn_shiling_confirm.on(Button.EventType.CLICK, this.showShiling, this);
-        Close_Btn.on(Node.EventType.TOUCH_END, ()=>{
+        Close_Btn.on(Node.EventType.TOUCH_END, () => {
             notice_popup.active = false;
         }, this);
         this.shiling_view.active = false;
@@ -152,11 +149,9 @@ export class LoginController extends Component {
 
     onlogin(userdata) {
         let parts = userdata.split("|");
-        // this._account = parts[0];
+        this._account = parts[1];
         this._nickname = parts[1];
         this._use_id = parts[2];
-        console.log("userdata", userdata);
-
 
         // if (this.manager_toggle.getComponent(Toggle).isChecked) {
         //     this.onJuniorLogin();
@@ -168,38 +163,33 @@ export class LoginController extends Component {
         //     LoginController.instance.http.node.on(Http.LOGINSUCCESS,LoginController.instance.loginCallback);
         //     LoginController.instance.http.node.on(Http.REGISTERSUCCESS,LoginController.instance.registerCallback);
         // } else {
-        this.useLocalData();
+        GameData.userData.nickName = this._nickname;
 
-        const AdvancedAccounts=["e74972433","n74972441","l74972445","h74977707","w74977831","w74977866","h74977895","t74977848","j74977880","r74977906"]
-        const IntermediateAccounts=["u74977719","o74977727","f74977731","i74977734","s74977835","w74977870","m74977900","u74977852","i74977888","h74977909"]
-        const JuniorAccounts=["m74977764","v74977768","t74977775","g74977778","z74977841","q74977874","w74977903","u74977723","e74977891","k74977912"]
-
-        console.log("GameData.Instance.nickName", GameData.Instance.nickName);
-        // this.onTestLogin();
-        // this.onAdvancedAccountsLogin();
-        if (AdvancedAccounts.indexOf(GameData.Instance.nickName) !== -1) 
-        {
-            this.onAdvancedAccountsLogin();
+        let strValue = sys.localStorage.getItem(GameData.userData.nickName + "userData");
+        if (strValue != "undefined" && strValue != null) {
+            //本地如果有该账号的数据
+            this.useLocalData();
+        } else {
+            //本地没有该账号的数据
+            const AdvancedAccounts = ["e74972433", "n74972441", "l74972445", "h74977707", "w74977831", "w74977866", "h74977895", "t74977848", "j74977880", "r74977906"]
+            const IntermediateAccounts = ["u74977719", "o74977727", "f74977731", "i74977734", "s74977835", "w74977870", "m74977900", "u74977852", "i74977888", "h74977909"]
+            const JuniorAccounts = ["m74977764", "v74977768", "t74977775", "g74977778", "z74977841", "q74977874", "w74977903", "u74977723", "e74977891", "k74977912"]
+            // this.onTestLogin();
+            // this.onAdvancedAccountsLogin();
+            if (AdvancedAccounts.indexOf(GameData.userData.nickName) !== -1) {
+                this.onAdvancedAccountsLogin();
+            }
+            else if (IntermediateAccounts.indexOf(GameData.userData.nickName) !== -1) {
+                this.onIntermediateLogin();
+            }
+            else if (JuniorAccounts.indexOf(GameData.userData.nickName) !== -1) {
+                this.onJuniorLogin();
+            }
+            this.useLocalData();
         }
-        else if (IntermediateAccounts.indexOf(GameData.Instance.nickName) !== -1) 
-        {
-            this.onIntermediateLogin();
-        }
-        else if (JuniorAccounts.indexOf(GameData.Instance.nickName) !== -1) 
-        {
-            this.onJuniorLogin();
-        }
-        // 2. 或者升级 tsconfig.json 的 lib 配置为 es2016 及以上
-        // 3. 或者在项目中引入 polyfill（如 core-js）以支持 includes
-
-        // }
-        // resources.preloadDir("textures", () => {
-        //     console.log("textures加载完成");
-        // });
-        // resources.preloadDir("prefabs", () => {
-        //     console.log("prefabs加载完成");
-        // });
-        // resources.preload("images/goods", SpriteFrame);
+        this.audioMgr.init();
+        this.audioMgr.playMusic("mainui_bg", true);
+        AudioManager.SetButtonSound();
     }
     // 检查是否已过零点
     checkIfTimeHasPassed() {
@@ -305,7 +295,7 @@ export class LoginController extends Component {
             if (sys.os === sys.OS.ANDROID || sys.isNative) {
                 native.bridge.sendToNative('login', 'test');
             } else {
-                this.onlogin(7 + "|" + "user" + "|" + 7);
+                this.onlogin(7 + "|" + "user7" + "|" + 7);//修改"user7"来切换不同账号，在编辑器中测试
             }
             // this.onlogin(7 + "|" + "user" + "|" + 7);
             //抖音
@@ -340,21 +330,19 @@ export class LoginController extends Component {
                 if (arg0 === "login") {
                     console.log("Account", arg1)
                     const data = JSON.parse(arg1)
-                    GameData.Instance.user_id = data.user_id as string
-                    GameData.Instance.age = data.adult_level as string
-                    GameData.Instance.nickName = data.nickname as string 
+                    GameData.userData.use_id = data.user_id as string
+                    GameData.userData.age = data.adult_level as string
+                    GameData.userData.nickName = data.nickname as string
 
-                    if (GameData.Instance.age === "3" || GameData.Instance.age === "2") 
-                    {
+                    if (GameData.userData.age === "3" || GameData.userData.age === "2") {
 
-                    } 
-                    else if (GameData.Instance.age === "1" || GameData.Instance.age === "0") 
-                    {
-                         this.exit();
+                    }
+                    else if (GameData.userData.age === "1" || GameData.userData.age === "0") {
+                        this.exit();
                     }
 
-                    LoginController.instance._account = GameData.Instance.nickName;
-                    LoginController.instance.onlogin(arg1 + "|" + GameData.Instance.nickName + "|" + arg1);
+                    LoginController.instance._account = GameData.userData.nickName;
+                    LoginController.instance.onlogin(arg1 + "|" + GameData.userData.nickName + "|" + arg1);
                 }
             }
         }
@@ -374,37 +362,38 @@ export class LoginController extends Component {
 
     getPayResult() {
         if (sys.os === sys.OS.ANDROID || sys.isNative) {
-            native.bridge.sendToNative('getPayResult', GameData.Instance.use_id);
+            native.bridge.sendToNative('getPayResult', GameData.userData.use_id);
         }
     }
 
     setPayment() {
         if (sys.os === sys.OS.ANDROID || sys.isNative) {
-            native.bridge.sendToNative('setPayment', GameData.Instance.use_id);
+            native.bridge.sendToNative('setPayment', GameData.userData.use_id);
         }
     }
 
     useLocalData() {
         //账号和本地缓存相同
-        
-        console.log("LoginController.instance._account : "+ LoginController.instance._account);
-        console.log("GameData.getUserData().nickName : "+ GameData.getUserData()?.nickName);
-        console.log("GameData.getUserData().nickName : "+ GameData.getUserData()?.account);
-        if (GameData.getUserData() && LoginController.instance._account == GameData.getUserData().nickName) {
+        // if (GameData.getUserData() && LoginController.instance._account == GameData.getUserData().nickName) {
         // if (GameData.getUserData()) {
-            console.log("读取本地缓存");
-            let userData = GameData.getUserData();
-            let battleData = GameData.getBattleData();
-            let taskData = GameData.getTaskData();
+        let userData = GameData.getUserData();
+        let battleData = GameData.getBattleData();
+        let taskData = GameData.getTaskData();
 
-            if (userData != null && battleData != null && taskData != null) {
-                GameData.userData = userData;
-                GameData.battleData = battleData;
-                GameData.taskData = taskData;
-                GameData.replaceData();
-                this.checkIfTimeHasPassed();
-            }
+        if (userData != null && battleData != null && taskData != null) {
+            GameData.userData = userData;
+            GameData.battleData = battleData;
+            GameData.taskData = taskData;
+            GameData.replaceData();
+            this.checkIfTimeHasPassed();
+        } else {
+            GameData.userData = GameData.defaultUserData;
+            GameData.battleData = GameData.defaultBattleData;
+            GameData.taskData = GameData.defaultTaskData;
+            GameData.replaceData();
+            this.checkIfTimeHasPassed();
         }
+        // }
         this.timeController.checkDateReset();
         if (GameData.userData.lastUpdateTime === null || (Date.now() - GameData.userData.lastUpdateTime > 1000)) {
             GameData.userData.lastUpdateTime = Date.now();
@@ -455,8 +444,8 @@ export class LoginController extends Component {
 
     //加载场景
     loadscene() {
-        // GameData.Instance.saveData();
-        // GameData.Instance.age = "2";
+        // GameData.saveData();
+        // GameData.userData.age = "2";
         let layout_top = LoginController.instance.node.getChildByName("layout_top");
         let load_pro = layout_top.getChildByName("load_pro");
         let progressBar = load_pro.getChildByName("ProgressBar").getComponent(ProgressBar);
@@ -553,6 +542,7 @@ export class LoginController extends Component {
         GameData.userData.guidanceId = 25
         GameData.userData.max_chapter = 180;
         GameData.userData.chapter = 180;
+        // GameData.userData.endlessChallengeMaxSurvive = 199;
         GameData.userData.doll_machine_lv = 50;
         GameData.userData.hasGoodsList[1] = 10000000;
         GameData.userData.hasGoodsList[2] = 10000000;
@@ -566,10 +556,6 @@ export class LoginController extends Component {
         GameData.userData.create_nickname = true;
         for (let i = 1001; i < 1013; i++) {
             GameData.userData.towerLv[i] = 100;
-        }
-
-        for (const build of GameData.userData.buildList) {
-            build.build_lv = 4;
         }
 
         ////已解锁建造点
@@ -626,6 +612,10 @@ export class LoginController extends Component {
             5: [1, 2, 3, 4],
         }
         GameData.userData.buildLvList = highbuildLvList;
+        // 使用中的建筑的列表
+        for (const build of GameData.userData.buildList) {
+            build.build_lv = 4;
+        }
         GameData.setUserData();
     }
 
@@ -647,10 +637,6 @@ export class LoginController extends Component {
         GameData.userData.create_nickname = true;
         for (let i = 1001; i < 1013; i++) {
             GameData.userData.towerLv[i] = 50;
-        }
-
-        for (const build of GameData.userData.buildList) {
-            build.build_lv = 3;
         }
 
         ////已解锁建造点
@@ -707,6 +693,10 @@ export class LoginController extends Component {
             5: [1, 2],
         }
         GameData.userData.buildLvList = highbuildLvList;
+        // 使用中的建筑的列表
+        for (const build of GameData.userData.buildList) {
+            build.build_lv = 2;
+        }
         GameData.setUserData();
     }
 
@@ -720,7 +710,7 @@ export class LoginController extends Component {
         GameData.setUserData();
     }
 
-     onTestLogin() {
+    onTestLogin() {
         console.log("测试账号登录");
         GameData.userData.guidanceId = 25
         GameData.userData.career = 1;
@@ -730,7 +720,7 @@ export class LoginController extends Component {
         GameData.userData.create_nickname = true;
         GameData.userData.max_chapter = 168;
         GameData.userData.chapter = 168;
-         const bestEquipList = {
+        const bestEquipList = {
             0:
                 [{ equip_id: 3001, effect_name: "攻击", effect_value: 61423.94, equip_quality: 6, equip_lv: 50 },
                 { equip_id: 3002, effect_name: "攻击", effect_value: 61423.94, equip_quality: 6, equip_lv: 50 },
@@ -756,7 +746,7 @@ export class LoginController extends Component {
         GameData.userData.hasEquipList = bestEquipList;
         GameData.setUserData();
     }
-    
+
 
     // // 检查是否需要重置累计在线时间（跨天判断）
     // private checkDateReset() {

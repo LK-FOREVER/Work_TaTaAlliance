@@ -58,7 +58,7 @@ export class TimeController extends Component {
             // 如果当前时间为21点且未成年游玩时间已到
             const currentHour = new Date().getHours();
             // console.log("currentHour："+ currentHour);
-            if (currentHour >= 21 && GameData.Instance.age == "2") {
+            if (currentHour >= 21 && GameData.userData.age == "2") {
                 if (limitNode.active) {
                     return;
                 }
@@ -66,7 +66,7 @@ export class TimeController extends Component {
                 if (limitNode) limitNode.active = true;
             }
 
-            // if (GameData.userData.dailyAccumulatedTime > 1 && GameData.Instance.age == "2") {
+            // if (GameData.userData.dailyAccumulatedTime > 1 && GameData.userData.age == "2") {
             //     console.log("未成年游玩时间已到");
             //     director.getScene().getChildByName("Canvas").getChildByName("limit_play_time").active = true;
             // }

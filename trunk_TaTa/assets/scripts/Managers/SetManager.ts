@@ -63,6 +63,7 @@ export class SetManager extends Component {
         })
         this.button_cancel.on(NodeEventType.TOUCH_END, () => {
             //取消退出登录
+            AudioManager.ins.playSound("click", false);
             this.tip_box.active = false;
         })
 
@@ -76,6 +77,7 @@ export class SetManager extends Component {
 
         this.set_close = this.node.getChildByName("set_close");
         this.set_close.on(NodeEventType.TOUCH_END, () => {
+            AudioManager.ins.playSound("click", false);
             this.node.active = false;
         })
     }

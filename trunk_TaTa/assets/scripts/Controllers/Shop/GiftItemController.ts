@@ -219,7 +219,7 @@ export class GiftItemController extends Component {
     {
         const cost = Number(this.info.price);
         console.log(GameData.userData.age)
-        if(GameData.Instance.age == "2" && cost>100)
+        if(GameData.Instance.userData.age == "2" && cost>100)
         {
                  console.log("cost : "+cost);
                  this.can_buy = false;
@@ -228,7 +228,7 @@ export class GiftItemController extends Component {
                  return false;
         }
         GameData.userData.cost_money_month+=cost;
-        if(GameData.Instance.age == "2" && GameData.userData.cost_money_month>400)
+        if(GameData.Instance.userData.age == "2" && GameData.userData.cost_money_month>400)
             {
                  GameData.userData.cost_money_month-=this.info.price;
                  this.can_buy = false;

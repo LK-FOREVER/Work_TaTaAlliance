@@ -64,8 +64,6 @@ export class AudioManager {
             this._music_volume = GameData.getUserData().audioMusic;
             this._sound_volume = GameData.getUserData().audioSound;
         }
-        // this._music_volume = GameData.userData.audioMusic;
-        // this._sound_volume = GameData.userData.audioSound;
         /**
          * 读取本地存储的数据
          *
@@ -83,9 +81,9 @@ export class AudioManager {
                 this._sound_muted == 1 ? 0 : this._sound_volume;
         }
         //设置bgm音量
-        this.setMusicVolume(GameData.userData.audioMusic);
+        this.setMusicVolume(this._music_volume);
         //设置sound音量
-        this.setSoundVolume(GameData.userData.audioSound);
+        this.setSoundVolume(this._sound_volume);
     }
 
     /**

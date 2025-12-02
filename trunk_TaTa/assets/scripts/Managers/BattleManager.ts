@@ -277,9 +277,13 @@ export class BattleManager extends Component {
 
     //设置当前关卡敌人信息
     setEnemyData() {
+        if (GameData.userData.isEndlessBattleScene && this.chapter_id > 200) {
+            this.chapter_id = this.chapter_id % 200;
+        }
         const chapterInfo = this.chapterData[this.chapter_id - 1][this.chapter_id - 1]
         if (GameData.userData.isEndlessBattleScene) {
             this.current_survive_num = GameData.userData.endlessChooseSurvive - 1; //当前存活波数
+
         }
         //当前关卡敌人数值
         this.enemy_list = [];
@@ -301,7 +305,7 @@ export class BattleManager extends Component {
                 if (data) {
                     if (data.enemy_id == enemy.enemy_id) {
                         enemy.is_boss = data.is_boss;
-                        // 无尽模式的敌人基础生命与普通模式的敌人基础生命不同，且当前波次的敌人生命是上一波次敌人生命的二倍，其他属性保持不变
+                        // 无尽模式的敌人基础生命与普通模式的敌人基础生命不同，既当前波次的敌人生命是上一波次敌人生命的二倍，其他属性保持不变
                         if (GameData.userData.isEndlessBattleScene) {
                             if (enemy.enemy_id == 101) {
                                 data.hp = 6;
@@ -409,12 +413,6 @@ export class BattleManager extends Component {
         const chapterInfo = this.chapterData[this.chapter_id - 1][this.chapter_id - 1]
 
         this.map_id = chapterInfo.map;
-        if (GameData.userData.isEndlessBattleScene) {
-            if (this.map_id - 6 < 0) {
-                this.map_id = Math.abs(this.map_id - 6);
-            }
-        }
-
 
         this.map = null;
         this.map_root.removeAllChildren();
@@ -1355,9 +1353,9 @@ export class BattleManager extends Component {
                 }
                 this.endlessAddScore(20);
             }
-            //已通关最大关卡
+            //是否通关最大关卡
             if (GameData.userData.isEndlessBattleScene) {
-                this.chapter_id >= 200 ? 1 : this.chapter_id;
+                this.chapter_id = this.chapter_id >= 200 ? 1 : this.chapter_id;
             } else {
                 GameData.userData.chapter = this.chapter_id >= 200 ? 200 : this.chapter_id;
                 this.chapter_id = GameData.userData.chapter
@@ -1485,7 +1483,6 @@ export class BattleManager extends Component {
         let bonus_box = instantiate(this.bonus_box);
         bonus_box.setParent(this.node);
         bonus_box.setPosition(0, 0);
-        //    console.log('展示季度奖金');
     }
 
     //成功，刷新地图

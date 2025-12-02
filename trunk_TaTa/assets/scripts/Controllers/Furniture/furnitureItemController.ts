@@ -27,7 +27,6 @@ export class furnitureItemController extends Component {
         this.updateUI()
 
         this.item_title.getComponent(Label).string = this.furnitureInfo.build_lv_name
-
         this.node.on(NodeEventType.TOUCH_END, (event) => {
             const canvas = find('Canvas')
             const build_upgrade_view = canvas.getChildByName("build_upgrade_view")

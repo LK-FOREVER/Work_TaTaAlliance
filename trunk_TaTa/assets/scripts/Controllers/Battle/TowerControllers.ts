@@ -132,13 +132,14 @@ export class TowerControllers extends Component {
         this.node.position = this.node.parent.getComponent(UITransform).convertToNodeSpaceAR(pos);
 
         this.range.active = true;
+        console.log("this.build_id", this.build_id);
         // console.log('点击测试移动');
     }
 
     _touchend(touchEvent) {
         this.is_move = false;
         this.range.active = false;
-        let location = touchEvent.getUILocation();
+        let location = touchEvent.getUILocation();//触摸结束后的位置
         let pos = v3(location.x, location.y, 0)
         // 防护：parent 可能为 null 或没有 UITransform，避免直接调用导致异常
         const parent = this.node.parent;
@@ -147,6 +148,7 @@ export class TowerControllers extends Component {
             if (parentUI) {
                 this.node.position = parentUI.convertToNodeSpaceAR(pos);
             } else {
+                //返回原来的位置
                 this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
             }
         } else {
@@ -164,7 +166,7 @@ export class TowerControllers extends Component {
         //碰撞成功，此时松开手指
         if (this.isTarget) {
             // 检查节点有效性
-            if (!this.node || !this.node.isValid || !GameData.battleData.TowerObj[this.build_id]) {
+            if (!this.node || !this.node.isValid ) {
                 this.node.position = BattleManager.Instance.bulidpoints[this.tower_data.build_id].pos;
                 return;
             }

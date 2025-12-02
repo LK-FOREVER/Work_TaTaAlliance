@@ -36,10 +36,9 @@ export class GameData extends Component {
     //taptap登录data
     static loginData = null;
 
-    //先临时存储到该文件，游戏结束前存储到本地
     static userData = {
         nickName_InGame: "user", //真昵称
-        nickName: "user", //傻逼SDK把nickname里面装账号信息，这才是真登录账号
+        nickName: "user", //SDK把nickname里面装账号信息，这才是真登录账号
         account: "null", //账户
         use_id: "null", //用户ID
         player_id: "", //用户id
@@ -336,7 +335,7 @@ export class GameData extends Component {
                 build_lv: 1,
             },
         ],
-        // 拥有建筑的等级
+        // 拥有建筑的等级[1, 2, 3, 4]
         buildLvList: {
             1: [1],
             2: [1],
@@ -365,8 +364,8 @@ export class GameData extends Component {
 
     // 默认数据
     static defaultTaskData = JSON.parse(JSON.stringify(GameData.taskData));
-    static defaultUserData = JSON.parse(JSON.stringify(GameData.userData));
     static defaultBattleData = JSON.parse(JSON.stringify(GameData.battleData));
+    static defaultUserData = JSON.parse(JSON.stringify(GameData.userData));
 
     // 属性
     static attributeType = {
@@ -528,14 +527,14 @@ export class GameData extends Component {
     static setBattleData() {
         let battleStr = JSON.stringify(GameData.battleData);
         //添加一个存储，key，value
-        sys.localStorage.setItem("battleData", battleStr);
+        sys.localStorage.setItem(GameData.userData.nickName + "battleData", battleStr);
     }
 
     //存储玩家数据
     static setUserData() {
         let userStr = JSON.stringify(GameData.userData);
         //添加一个存储，key，value
-        sys.localStorage.setItem("userData", userStr);
+        sys.localStorage.setItem(GameData.userData.nickName + "userData", userStr);
         GameData.setTaskData();
         GameData.setBattleData();
         EventManager.Instance.emit(EventConst.UPDATE_SHOP)
@@ -544,7 +543,7 @@ export class GameData extends Component {
     static setTaskData() {
         let taskStr = JSON.stringify(GameData.taskData);
         //添加一个存储，key，value
-        sys.localStorage.setItem("taskData", taskStr);
+        sys.localStorage.setItem(GameData.userData.nickName + "taskData", taskStr);
         // if (LoginController.isHttp) {
         //     GameData.sendDataRequest();
         // }
@@ -553,9 +552,7 @@ export class GameData extends Component {
     //获取玩家数据
     static getUserData() {
         //获取一个key
-        let strValue = sys.localStorage.getItem("userData");
-        // console.log("strValue", sys.localStorage.getItem("userData"));
-
+        let strValue = sys.localStorage.getItem(GameData.userData.nickName + "userData");
         if (strValue != "undefined" && strValue != null) {
             try {
                 const data = JSON.parse(strValue);
@@ -576,7 +573,7 @@ export class GameData extends Component {
     //获取战斗数据
     static getBattleData() {
         //获取一个key
-        let strValue = sys.localStorage.getItem("battleData");
+        let strValue = sys.localStorage.getItem(GameData.userData.nickName + "battleData");
         if (strValue != "undefined") {
             let data = JSON.parse(strValue);
             return data;
@@ -588,7 +585,7 @@ export class GameData extends Component {
     //获取任务数据
     static getTaskData() {
         //获取一个key
-        let strValue = sys.localStorage.getItem("taskData");
+        let strValue = sys.localStorage.getItem(GameData.userData.nickName + "taskData");
         if (strValue != "undefined") {
             let data = JSON.parse(strValue);
             return data;
