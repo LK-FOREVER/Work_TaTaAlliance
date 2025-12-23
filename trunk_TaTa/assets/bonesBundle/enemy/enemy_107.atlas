@@ -1,0 +1,55 @@
+
+enemy_107.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+piaofu1
+  rotate: false
+  xy: 84, 73
+  size: 5, 7
+  orig: 7, 9
+  offset: 1, 1
+  index: -1
+piaofu2
+  rotate: false
+  xy: 84, 82
+  size: 7, 11
+  orig: 9, 13
+  offset: 1, 1
+  index: -1
+piaofu3
+  rotate: false
+  xy: 84, 105
+  size: 11, 20
+  orig: 13, 22
+  offset: 1, 1
+  index: -1
+piaofu4
+  rotate: false
+  xy: 84, 95
+  size: 8, 8
+  orig: 10, 10
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 37
+  size: 80, 88
+  orig: 80, 89
+  offset: 0, 1
+  index: -1
+shou1
+  rotate: true
+  xy: 46, 6
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+shou2
+  rotate: true
+  xy: 2, 2
+  size: 33, 42
+  orig: 33, 42
+  offset: 0, 0
+  index: -1

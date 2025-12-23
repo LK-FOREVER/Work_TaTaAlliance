@@ -1,0 +1,48 @@
+
+enemy_106.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+piaofu1
+  rotate: false
+  xy: 79, 86
+  size: 8, 12
+  orig: 10, 14
+  offset: 1, 1
+  index: -1
+piaofu2
+  rotate: false
+  xy: 79, 75
+  size: 8, 9
+  orig: 10, 11
+  offset: 1, 1
+  index: -1
+piaofu3
+  rotate: false
+  xy: 79, 100
+  size: 10, 21
+  orig: 12, 23
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 35
+  size: 75, 86
+  orig: 75, 86
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: true
+  xy: 2, 2
+  size: 31, 46
+  orig: 31, 46
+  offset: 0, 0
+  index: -1
+shou2
+  rotate: true
+  xy: 50, 4
+  size: 29, 43
+  orig: 29, 43
+  offset: 0, 0
+  index: -1

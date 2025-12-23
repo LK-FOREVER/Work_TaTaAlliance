@@ -1,0 +1,17 @@
+[
+   {"reward_id":0,"reward_content_name":"挑战积分达到200","score":200,"reward_content_num":1,"reward_1":1,"reward_num_1":2000,"reward_2":0,"reward_num_2":0},
+   {"reward_id":1,"reward_content_name":"挑战积分达到400","score":400,"reward_content_num":1,"reward_1":1,"reward_num_1":5000,"reward_2":0,"reward_num_2":0},
+   {"reward_id":2,"reward_content_name":"挑战积分达到600","score":600,"reward_content_num":1,"reward_1":1,"reward_num_1":5000,"reward_2":18,"reward_num_2":5},
+   {"reward_id":3,"reward_content_name":"挑战积分达到800","score":800,"reward_content_num":1,"reward_1":1,"reward_num_1":5000,"reward_2":5,"reward_num_2":5},
+   {"reward_id":4,"reward_content_name":"挑战积分达到1000","score":1000,"reward_content_num":1,"reward_1":18,"reward_num_1":5,"reward_2":5,"reward_num_2":5},
+   {"reward_id":5,"reward_content_name":"挑战积分达到1500","score":1500,"reward_content_num":1,"reward_1":18,"reward_num_1":5,"reward_2":5,"reward_num_2":5},
+   {"reward_id":6,"reward_content_name":"挑战积分达到2000","score":2000,"reward_content_num":1,"reward_1":18,"reward_num_1":5,"reward_2":5,"reward_num_2":5},
+   {"reward_id":7,"reward_content_name":"挑战积分达到2500","score":2500,"reward_content_num":1,"reward_1":18,"reward_num_1":5,"reward_2":5,"reward_num_2":5},
+   {"reward_id":8,"reward_content_name":"挑战积分达到5000","score":5000,"reward_content_num":1,"reward_1":18,"reward_num_1":5,"reward_2":5,"reward_num_2":10},
+   {"reward_id":9,"reward_content_name":"挑战积分达到10000","score":10000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10},
+   {"reward_id":10,"reward_content_name":"挑战积分达到12000","score":12000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10},
+   {"reward_id":11,"reward_content_name":"挑战积分达到14000","score":14000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10},
+   {"reward_id":12,"reward_content_name":"挑战积分达到16000","score":16000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10},
+   {"reward_id":13,"reward_content_name":"挑战积分达到18000","score":18000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10},
+   {"reward_id":14,"reward_content_name":"挑战积分达到20000","score":20000,"reward_content_num":1,"reward_1":18,"reward_num_1":10,"reward_2":5,"reward_num_2":10}
+]

@@ -1,0 +1,153 @@
+
+spine_1003.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+erduo
+  rotate: true
+  xy: 757, 128
+  size: 55, 51
+  orig: 57, 53
+  offset: 1, 1
+  index: -1
+fazhang
+  rotate: true
+  xy: 549, 5
+  size: 102, 257
+  orig: 109, 270
+  offset: 1, 12
+  index: -1
+gebo1
+  rotate: false
+  xy: 760, 197
+  size: 48, 55
+  orig: 51, 58
+  offset: 2, 1
+  index: -1
+gebo2
+  rotate: true
+  xy: 677, 150
+  size: 33, 44
+  orig: 35, 47
+  offset: 1, 1
+  index: -1
+gebo3
+  rotate: false
+  xy: 668, 109
+  size: 33, 39
+  orig: 35, 42
+  offset: 1, 1
+  index: -1
+gebo4
+  rotate: false
+  xy: 808, 73
+  size: 36, 53
+  orig: 39, 55
+  offset: 2, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 195, 8
+  size: 102, 89
+  orig: 102, 89
+  offset: 0, 0
+  index: -1
+shoou1
+  rotate: false
+  xy: 703, 110
+  size: 52, 38
+  orig: 54, 40
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: false
+  xy: 276, 101
+  size: 60, 151
+  orig: 63, 153
+  offset: 1, 1
+  index: -1
+tou
+  rotate: false
+  xy: 2, 27
+  size: 191, 225
+  orig: 193, 227
+  offset: 1, 1
+  index: -1
+toufa1
+  rotate: true
+  xy: 338, 109
+  size: 143, 255
+  orig: 150, 255
+  offset: 7, 0
+  index: -1
+toufa2
+  rotate: true
+  xy: 595, 150
+  size: 102, 80
+  orig: 102, 80
+  offset: 0, 0
+  index: -1
+toufa3
+  rotate: true
+  xy: 343, 2
+  size: 105, 104
+  orig: 105, 105
+  offset: 0, 1
+  index: -1
+tui1
+  rotate: true
+  xy: 595, 109
+  size: 39, 71
+  orig: 42, 73
+  offset: 1, 1
+  index: -1
+tui2
+  rotate: false
+  xy: 724, 185
+  size: 34, 67
+  orig: 37, 68
+  offset: 3, 0
+  index: -1
+tui3
+  rotate: false
+  xy: 677, 185
+  size: 45, 67
+  orig: 45, 68
+  offset: 0, 1
+  index: -1
+tui4
+  rotate: false
+  xy: 299, 18
+  size: 42, 81
+  orig: 42, 81
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 808, 27
+  size: 38, 44
+  orig: 38, 44
+  offset: 0, 0
+  index: -1
+xiashen
+  rotate: true
+  xy: 195, 99
+  size: 153, 79
+  orig: 153, 84
+  offset: 0, 5
+  index: -1
+yanjing1
+  rotate: true
+  xy: 449, 3
+  size: 104, 50
+  orig: 106, 52
+  offset: 1, 1
+  index: -1
+yanjing2
+  rotate: true
+  xy: 501, 3
+  size: 104, 46
+  orig: 107, 49
+  offset: 2, 1
+  index: -1

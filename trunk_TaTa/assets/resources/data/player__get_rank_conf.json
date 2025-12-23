@@ -1,0 +1,21 @@
+[
+   {"0":{"rank_id":1,"rank_grade":1,"rank_name":"指尖守卫3","rank_grade_icon":"common_rank_1","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_1_3","required_score":0}},
+   {"1100":{"rank_id":2,"rank_grade":1,"rank_name":"指尖守卫2","rank_grade_icon":"common_rank_1","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_1_2","required_score":1100}},
+   {"1200":{"rank_id":3,"rank_grade":1,"rank_name":"指尖守卫1","rank_grade_icon":"common_rank_1","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_1_1","required_score":1200}},
+   {"1300":{"rank_id":4,"rank_grade":2,"rank_name":"不屈勇士3","rank_grade_icon":"common_rank_2","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_2_3","required_score":1300}},
+   {"1400":{"rank_id":5,"rank_grade":2,"rank_name":"不屈勇士2","rank_grade_icon":"common_rank_2","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_2_2","required_score":1400}},
+   {"1500":{"rank_id":6,"rank_grade":2,"rank_name":"不屈勇士1","rank_grade_icon":"common_rank_2","rank_grade_icon_scale":30,"rank_name_icon":"common_rank_2_1","required_score":1500}},
+   {"1600":{"rank_id":7,"rank_grade":3,"rank_name":"无畏先锋3","rank_grade_icon":"common_rank_3","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_3_3","required_score":1600}},
+   {"1700":{"rank_id":8,"rank_grade":3,"rank_name":"无畏先锋2","rank_grade_icon":"common_rank_3","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_3_2","required_score":1700}},
+   {"1800":{"rank_id":9,"rank_grade":3,"rank_name":"无畏先锋1","rank_grade_icon":"common_rank_3","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_3_1","required_score":1800}},
+   {"1900":{"rank_id":10,"rank_grade":4,"rank_name":"杰出统帅3","rank_grade_icon":"common_rank_4","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_4_3","required_score":1900}},
+   {"2000":{"rank_id":11,"rank_grade":4,"rank_name":"杰出统帅2","rank_grade_icon":"common_rank_4","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_4_2","required_score":2000}},
+   {"2100":{"rank_id":12,"rank_grade":4,"rank_name":"杰出统帅1","rank_grade_icon":"common_rank_4","rank_grade_icon_scale":27,"rank_name_icon":"common_rank_4_1","required_score":2100}},
+   {"2200":{"rank_id":13,"rank_grade":5,"rank_name":"超凡主公3","rank_grade_icon":"common_rank_5","rank_grade_icon_scale":26,"rank_name_icon":"common_rank_5_3","required_score":2200}},
+   {"2300":{"rank_id":14,"rank_grade":5,"rank_name":"超凡主公2","rank_grade_icon":"common_rank_5","rank_grade_icon_scale":26,"rank_name_icon":"common_rank_5_2","required_score":2300}},
+   {"2400":{"rank_id":15,"rank_grade":5,"rank_name":"超凡主公1","rank_grade_icon":"common_rank_5","rank_grade_icon_scale":26,"rank_name_icon":"common_rank_5_1","required_score":2400}},
+   {"2500":{"rank_id":16,"rank_grade":6,"rank_name":"传奇领主3","rank_grade_icon":"common_rank_6","rank_grade_icon_scale":25,"rank_name_icon":"common_rank_6_3","required_score":2500}},
+   {"2600":{"rank_id":17,"rank_grade":6,"rank_name":"传奇领主2","rank_grade_icon":"common_rank_6","rank_grade_icon_scale":25,"rank_name_icon":"common_rank_6_2","required_score":2600}},
+   {"2700":{"rank_id":18,"rank_grade":6,"rank_name":"传奇领主1","rank_grade_icon":"common_rank_6","rank_grade_icon_scale":25,"rank_name_icon":"common_rank_6_1","required_score":2700}},
+   {"2800":{"rank_id":19,"rank_grade":7,"rank_name":"指尖主宰","rank_grade_icon":"common_rank_7","rank_grade_icon_scale":25,"rank_name_icon":"common_rank_7_1","required_score":2800}}
+]

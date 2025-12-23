@@ -1,0 +1,50 @@
+{
+  "__version__": "1.0.6",
+  "general": {
+    "designResolution": {
+      "width": 1440,
+      "height": 2400,
+      "fitHeight": true,
+      "fitWidth": false
+    }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "CTOR"
+      },
+      {
+        "index": 2,
+        "name": "TOWER"
+      },
+      {
+        "index": 3,
+        "name": "ENEMY"
+      },
+      {
+        "index": 4,
+        "name": "ATTACK"
+      },
+      {
+        "index": 5,
+        "name": "BUILDPOINT"
+      },
+      {
+        "index": 6,
+        "name": "BULLET"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 0,
+      "1": 32,
+      "2": 32,
+      "3": 208,
+      "4": 8,
+      "5": 6,
+      "6": 8,
+      "7": 8
+    }
+  },
+  "custom_joint_texture_layouts": []
+}

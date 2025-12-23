@@ -1,0 +1,111 @@
+
+spine_1016.png
+size: 189,481
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo
+  rotate: false
+  xy: 152, 292
+  size: 34, 40
+  orig: 34, 40
+  offset: 0, 0
+  index: -1
+gebo1
+  rotate: false
+  xy: 151, 118
+  size: 36, 56
+  orig: 36, 57
+  offset: 0, 1
+  index: -1
+gebo2
+  rotate: false
+  xy: 152, 252
+  size: 32, 38
+  orig: 33, 38
+  offset: 1, 0
+  index: -1
+gebo3
+  rotate: false
+  xy: 152, 334
+  size: 35, 49
+  orig: 35, 49
+  offset: 0, 0
+  index: -1
+pigu
+  rotate: true
+  xy: 129, 48
+  size: 68, 39
+  orig: 70, 39
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 134
+  size: 88, 143
+  orig: 216, 143
+  offset: 125, 0
+  index: -1
+shou
+  rotate: false
+  xy: 129, 2
+  size: 51, 44
+  orig: 51, 44
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 2, 279
+  size: 101, 200
+  orig: 103, 202
+  offset: 1, 1
+  index: -1
+tou
+  rotate: false
+  xy: 105, 385
+  size: 79, 94
+  orig: 81, 96
+  offset: 1, 1
+  index: -1
+toufa
+  rotate: false
+  xy: 151, 176
+  size: 36, 57
+  orig: 40, 57
+  offset: 4, 0
+  index: -1
+toufa1
+  rotate: true
+  xy: 152, 235
+  size: 15, 34
+  orig: 15, 34
+  offset: 0, 0
+  index: -1
+toufa2
+  rotate: false
+  xy: 2, 19
+  size: 125, 104
+  orig: 125, 104
+  offset: 0, 0
+  index: -1
+tui
+  rotate: false
+  xy: 105, 250
+  size: 45, 133
+  orig: 45, 133
+  offset: 0, 0
+  index: -1
+tui1
+  rotate: false
+  xy: 101, 125
+  size: 48, 123
+  orig: 48, 123
+  offset: 0, 0
+  index: -1
+zhengyan
+  rotate: true
+  xy: 92, 248
+  size: 29, 7
+  orig: 31, 9
+  offset: 1, 1
+  index: -1

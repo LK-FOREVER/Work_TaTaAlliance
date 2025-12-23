@@ -1,0 +1,18 @@
+[
+   {"equip_type":"单体型","equip_type_id":0,"equip_position_id":1,"equip_id":3001},
+   {"equip_type":"单体型","equip_type_id":0,"equip_position_id":2,"equip_id":3002},
+   {"equip_type":"单体型","equip_type_id":0,"equip_position_id":3,"equip_id":3003},
+   {"equip_type":"单体型","equip_type_id":0,"equip_position_id":4,"equip_id":3004},
+   {"equip_type":"群体型","equip_type_id":1,"equip_position_id":1,"equip_id":3005},
+   {"equip_type":"群体型","equip_type_id":1,"equip_position_id":2,"equip_id":3006},
+   {"equip_type":"群体型","equip_type_id":1,"equip_position_id":3,"equip_id":3007},
+   {"equip_type":"群体型","equip_type_id":1,"equip_position_id":4,"equip_id":3008},
+   {"equip_type":"控制型","equip_type_id":2,"equip_position_id":1,"equip_id":3009},
+   {"equip_type":"控制型","equip_type_id":2,"equip_position_id":2,"equip_id":3010},
+   {"equip_type":"控制型","equip_type_id":2,"equip_position_id":3,"equip_id":3011},
+   {"equip_type":"控制型","equip_type_id":2,"equip_position_id":4,"equip_id":3012},
+   {"equip_type":"持续型","equip_type_id":3,"equip_position_id":1,"equip_id":3013},
+   {"equip_type":"持续型","equip_type_id":3,"equip_position_id":2,"equip_id":3014},
+   {"equip_type":"持续型","equip_type_id":3,"equip_position_id":3,"equip_id":3015},
+   {"equip_type":"持续型","equip_type_id":3,"equip_position_id":4,"equip_id":3016}
+]

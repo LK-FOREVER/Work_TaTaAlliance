@@ -1,0 +1,97 @@
+
+action.png
+size: 402,300
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images5/bowen_01
+  rotate: false
+  xy: 178, 222
+  size: 69, 76
+  orig: 76, 76
+  offset: 7, 0
+  index: -1
+images5/bowen_02
+  rotate: true
+  xy: 249, 224
+  size: 74, 75
+  orig: 76, 76
+  offset: 1, 1
+  index: -1
+images5/bowen_03
+  rotate: true
+  xy: 326, 225
+  size: 73, 74
+  orig: 76, 76
+  offset: 2, 1
+  index: -1
+images5/bowen_04
+  rotate: true
+  xy: 326, 152
+  size: 71, 73
+  orig: 76, 76
+  offset: 3, 2
+  index: -1
+images5/bowen_05
+  rotate: false
+  xy: 249, 82
+  size: 71, 71
+  orig: 76, 76
+  offset: 3, 3
+  index: -1
+images5/bowen_06
+  rotate: true
+  xy: 322, 81
+  size: 69, 71
+  orig: 76, 76
+  offset: 4, 4
+  index: -1
+images5/bowen_07
+  rotate: true
+  xy: 249, 155
+  size: 67, 72
+  orig: 76, 76
+  offset: 5, 4
+  index: -1
+images5/bowen_08
+  rotate: false
+  xy: 199, 8
+  size: 67, 71
+  orig: 76, 76
+  offset: 5, 5
+  index: -1
+images5/bowen_09
+  rotate: false
+  xy: 268, 9
+  size: 65, 70
+  orig: 76, 76
+  offset: 6, 6
+  index: -1
+images5/bowen_10
+  rotate: false
+  xy: 178, 144
+  size: 69, 76
+  orig: 76, 76
+  offset: 7, 0
+  index: -1
+images5/guang01
+  rotate: false
+  xy: 2, 2
+  size: 102, 107
+  orig: 122, 122
+  offset: 10, 7
+  index: -1
+images5/light01
+  rotate: false
+  xy: 2, 111
+  size: 174, 187
+  orig: 186, 202
+  offset: 6, 6
+  index: -1
+images5/yuan
+  rotate: false
+  xy: 106, 10
+  size: 91, 99
+  orig: 122, 122
+  offset: 19, 11
+  index: -1

@@ -1,0 +1,14 @@
+[
+   {"func_desc":{"value":"好友"}},
+   {"func_desc2":{"value":"好友助战"}},
+   {"limit_num":{"value":60}},
+   {"black_limit_num":{"value":30}},
+   {"apply_add_friend_max_num":{"value":100}},
+   {"like_to_max_num":{"value":10}},
+   {"like_received_max_num":{"value":10}},
+   {"friend_point":{"value":7}},
+   {"friend_max_times":{"value":5}},
+   {"friend_reward":{"value":[{"k":2,"v":20}]}},
+   {"blacklist_leave_message_num":{"value":1}},
+   {"leave_message_cost":{"value":[{"k":2,"v":20}]}}
+]

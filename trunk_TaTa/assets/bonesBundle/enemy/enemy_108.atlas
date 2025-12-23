@@ -1,0 +1,62 @@
+
+enemy_108.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: false
+  xy: 148, 5
+  size: 23, 17
+  orig: 25, 19
+  offset: 1, 1
+  index: -1
+gebo2
+  rotate: true
+  xy: 164, 29
+  size: 32, 38
+  orig: 32, 38
+  offset: 0, 0
+  index: -1
+huoyan1
+  rotate: true
+  xy: 173, 2
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+huoyan2
+  rotate: true
+  xy: 58, 15
+  size: 46, 36
+  orig: 46, 36
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 5
+  size: 54, 56
+  orig: 56, 58
+  offset: 1, 1
+  index: -1
+shou1
+  rotate: true
+  xy: 96, 21
+  size: 40, 31
+  orig: 42, 33
+  offset: 1, 1
+  index: -1
+weiba
+  rotate: true
+  xy: 129, 24
+  size: 37, 33
+  orig: 37, 33
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: false
+  xy: 96, 4
+  size: 50, 15
+  orig: 50, 15
+  offset: 0, 0
+  index: -1

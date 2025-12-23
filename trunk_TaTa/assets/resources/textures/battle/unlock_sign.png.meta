@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.26",
+  "importer": "image",
+  "imported": true,
+  "uuid": "652c909a-c531-47ae-b110-6f1d17ba8ff7",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "652c909a-c531-47ae-b110-6f1d17ba8ff7@6c48a",
+      "displayName": "unlock_sign",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "652c909a-c531-47ae-b110-6f1d17ba8ff7",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "652c909a-c531-47ae-b110-6f1d17ba8ff7@f9941",
+      "displayName": "unlock_sign",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0.5,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 84,
+        "height": 114,
+        "rawWidth": 84,
+        "rawHeight": 115,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -42,
+            -57,
+            0,
+            42,
+            -57,
+            0,
+            -42,
+            57,
+            0,
+            42,
+            57,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            0,
+            115,
+            84,
+            115,
+            0,
+            1,
+            84,
+            1
+          ],
+          "nuv": [
+            0,
+            0.008695652173913044,
+            1,
+            0.008695652173913044,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -42,
+            -57,
+            0
+          ],
+          "maxPos": [
+            42,
+            57,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "652c909a-c531-47ae-b110-6f1d17ba8ff7@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "652c909a-c531-47ae-b110-6f1d17ba8ff7@f9941"
+  }
+}

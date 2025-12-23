@@ -1,0 +1,37 @@
+[
+        {
+            "id": 1006,
+            "name": "赏善司",
+            "rarity": "橙",
+            "probability": 80,
+            "hurttype": "群体型"
+        },
+        {
+            "id": 1007,
+            "name": "钟馗",
+            "rarity": "橙",
+            "probability": 60,
+            "hurttype": "单体型"
+        },
+        {
+            "id": 1008,
+            "name": "察查司",
+            "rarity": "橙",
+            "probability": 80,
+            "hurttype": "单体型"
+        },
+        {
+            "id": 1009,
+            "name": "判官",
+            "rarity": "橙",
+            "probability": 60,
+            "hurttype": "群体型"
+        },
+        {
+            "id": 1010,
+            "name": "阎罗王",
+            "rarity": "橙",
+            "probability": 50,
+            "hurttype": "效果型"
+        }
+]

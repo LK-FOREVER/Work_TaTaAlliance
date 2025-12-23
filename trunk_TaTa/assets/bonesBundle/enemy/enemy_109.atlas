@@ -1,0 +1,55 @@
+
+enemy_109.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: false
+  xy: 96, 58
+  size: 13, 14
+  orig: 15, 16
+  offset: 1, 1
+  index: -1
+gebo2
+  rotate: true
+  xy: 59, 42
+  size: 30, 35
+  orig: 32, 37
+  offset: 1, 1
+  index: -1
+huoyan1
+  rotate: false
+  xy: 83, 9
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+huoyan2
+  rotate: false
+  xy: 59, 74
+  size: 44, 31
+  orig: 44, 31
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 41
+  size: 55, 64
+  orig: 57, 66
+  offset: 1, 1
+  index: -1
+shou1
+  rotate: false
+  xy: 2, 2
+  size: 39, 37
+  orig: 41, 39
+  offset: 1, 1
+  index: -1
+weiba
+  rotate: false
+  xy: 43, 3
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1

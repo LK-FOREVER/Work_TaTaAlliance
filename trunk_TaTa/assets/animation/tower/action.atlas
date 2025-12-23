@@ -1,0 +1,36 @@
+action.png
+size:1818,460
+filter:Linear,Linear
+pma:true
+gebo
+bounds:2,12,592,446
+piao
+bounds:910,242,469,216
+piao 1
+bounds:1370,113,289,98
+piao 2
+bounds:1277,25,91,215
+shenti
+bounds:596,7,312,451
+offsets:0,0,504,451
+toubu
+bounds:1661,102,116,109
+offsets:0,10,116,119
+toufa 1
+bounds:1653,2,89,98
+toufa 2
+bounds:1370,7,101,104
+toufa 3
+bounds:1381,213,394,245
+yixiu
+bounds:910,26,214,365
+rotate:90
+zhuangshi 1
+bounds:1473,32,114,79
+offsets:0,0,141,79
+zhuangshi 1-1
+bounds:1589,59,52,62
+offsets:0,15,52,77
+rotate:90
+zhuangshi 2
+bounds:1777,335,39,123

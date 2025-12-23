@@ -1,0 +1,48 @@
+
+enemy_105.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+piaofu1
+  rotate: false
+  xy: 63, 12
+  size: 7, 11
+  orig: 9, 13
+  offset: 1, 1
+  index: -1
+piaofu2
+  rotate: false
+  xy: 63, 2
+  size: 8, 8
+  orig: 10, 10
+  offset: 1, 1
+  index: -1
+piaofu3
+  rotate: false
+  xy: 63, 25
+  size: 10, 20
+  orig: 12, 22
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 47
+  size: 61, 76
+  orig: 61, 76
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 2, 2
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: -1
+shou2
+  rotate: false
+  xy: 34, 4
+  size: 27, 41
+  orig: 28, 41
+  offset: 1, 0
+  index: -1

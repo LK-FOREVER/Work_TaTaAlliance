@@ -1,0 +1,160 @@
+
+spine_1008.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gebo1
+  rotate: true
+  xy: 2, 17
+  size: 182, 222
+  orig: 221, 224
+  offset: 38, 1
+  index: -1
+gebo3
+  rotate: false
+  xy: 731, 289
+  size: 98, 99
+  orig: 117, 101
+  offset: 18, 1
+  index: -1
+gebo4
+  rotate: false
+  xy: 642, 133
+  size: 96, 112
+  orig: 98, 115
+  offset: 1, 2
+  index: -1
+huzi1
+  rotate: false
+  xy: 498, 25
+  size: 78, 51
+  orig: 80, 53
+  offset: 1, 1
+  index: -1
+huzi2
+  rotate: false
+  xy: 552, 264
+  size: 64, 36
+  orig: 66, 38
+  offset: 1, 1
+  index: -1
+huzi3
+  rotate: false
+  xy: 226, 27
+  size: 155, 172
+  orig: 155, 172
+  offset: 0, 0
+  index: -1
+meimao1
+  rotate: false
+  xy: 259, 201
+  size: 42, 33
+  orig: 44, 35
+  offset: 1, 1
+  index: -1
+meimao2
+  rotate: true
+  xy: 580, 334
+  size: 42, 34
+  orig: 44, 36
+  offset: 1, 1
+  index: -1
+pifeng
+  rotate: true
+  xy: 2, 201
+  size: 307, 255
+  orig: 307, 255
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 259, 236
+  size: 272, 218
+  orig: 272, 274
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 383, 78
+  size: 133, 156
+  orig: 135, 158
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: false
+  xy: 479, 244
+  size: 71, 56
+  orig: 73, 58
+  offset: 1, 1
+  index: -1
+tou
+  rotate: true
+  xy: 518, 90
+  size: 152, 122
+  orig: 152, 122
+  offset: 0, 0
+  index: -1
+tui1
+  rotate: true
+  xy: 618, 247
+  size: 129, 111
+  orig: 132, 114
+  offset: 1, 1
+  index: -1
+tui2
+  rotate: false
+  xy: 578, 9
+  size: 117, 79
+  orig: 121, 82
+  offset: 1, 2
+  index: -1
+tui3
+  rotate: true
+  xy: 580, 378
+  size: 130, 120
+  orig: 132, 122
+  offset: 1, 1
+  index: -1
+tui4
+  rotate: true
+  xy: 702, 390
+  size: 118, 99
+  orig: 120, 101
+  offset: 1, 1
+  index: -1
+xiabai1
+  rotate: true
+  xy: 803, 394
+  size: 114, 80
+  orig: 114, 80
+  offset: 0, 0
+  index: -1
+xiabai2
+  rotate: true
+  xy: 479, 302
+  size: 206, 99
+  orig: 206, 100
+  offset: 0, 0
+  index: -1
+yanjing1
+  rotate: false
+  xy: 64, 5
+  size: 58, 10
+  orig: 60, 12
+  offset: 1, 1
+  index: -1
+yanjing2
+  rotate: false
+  xy: 2, 2
+  size: 60, 13
+  orig: 62, 15
+  offset: 1, 1
+  index: -1
+yaodai
+  rotate: false
+  xy: 383, 7
+  size: 113, 69
+  orig: 115, 71
+  offset: 1, 1
+  index: -1

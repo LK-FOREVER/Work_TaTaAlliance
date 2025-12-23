@@ -1,0 +1,8 @@
+[
+   {"id":0,"num":1200,"price":"0.99","tag":"hc_rc_1"},
+   {"id":1,"num":6000,"price":"4.99","tag":"hc_rc_2"},
+   {"id":2,"num":12000,"price":"9.99","tag":"hc_rc_3"},
+   {"id":3,"num":24000,"price":"19.99","tag":"hc_rc_4"},
+   {"id":4,"num":60000,"price":"49.99","tag":"hc_rc_5"},
+   {"id":5,"num":120000,"price":"99.99","tag":"hc_rc_6"}
+]

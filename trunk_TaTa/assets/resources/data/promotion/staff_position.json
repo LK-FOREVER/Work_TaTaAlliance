@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "major_position_id": 1,
+        "major_position": "Intern",
+        "small_position_id": 1,
+        "small_position": "Intern Ⅰ"
+    },
+    {
+        "id": 2,
+        "major_position_id": 1,
+        "major_position": "Intern",
+        "small_position_id": 2,
+        "small_position": "Intern Ⅱ"
+    },
+    {
+        "id": 3,
+        "major_position_id": 1,
+        "major_position": "Intern",
+        "small_position_id": 3,
+        "small_position": "Intern Ⅲ"
+    },
+    {
+        "id": 4,
+        "major_position_id": 2,
+        "major_position": "Regular Employee",
+        "small_position_id": 1,
+        "small_position": "Regular Employee Ⅰ"
+    },
+    {
+        "id": 5,
+        "major_position_id": 2,
+        "major_position": "Regular Employee",
+        "small_position_id": 2,
+        "small_position": "Regular Employee Ⅱ"
+    },
+    {
+        "id": 6,
+        "major_position_id": 2,
+        "major_position": "Regular Employee",
+        "small_position_id": 3,
+        "small_position": "Regular Employee Ⅲ"
+    },
+    {
+        "id": 7,
+        "major_position_id": 3,
+        "major_position": "Team Leader",
+        "small_position_id": 1,
+        "small_position": "Team Leader Ⅰ"
+    },
+    {
+        "id": 8,
+        "major_position_id": 3,
+        "major_position": "Team Leader",
+        "small_position_id": 2,
+        "small_position": "Team Leader Ⅱ"
+    },
+    {
+        "id": 9,
+        "major_position_id": 3,
+        "major_position": "Team Leader",
+        "small_position_id": 3,
+        "small_position": "Team Leader Ⅲ"
+    },
+    {
+        "id": 10,
+        "major_position_id": 4,
+        "major_position": "Manager",
+        "small_position_id": 1,
+        "small_position": "Manager Ⅰ"
+    },
+    {
+        "id": 11,
+        "major_position_id": 4,
+        "major_position": "Manager",
+        "small_position_id": 2,
+        "small_position": "Manager Ⅱ"
+    },
+    {
+        "id": 12,
+        "major_position_id": 4,
+        "major_position": "Manager",
+        "small_position_id": 3,
+        "small_position": "Manager Ⅲ"
+    },
+    {
+        "id": 13,
+        "major_position_id": 5,
+        "major_position": "Director",
+        "small_position_id": 1,
+        "small_position": "Director Ⅰ"
+    },
+    {
+        "id": 14,
+        "major_position_id": 5,
+        "major_position": "Director",
+        "small_position_id": 2,
+        "small_position": "Director Ⅱ"
+    },
+    {
+        "id": 15,
+        "major_position_id": 5,
+        "major_position": "Director",
+        "small_position_id": 3,
+        "small_position": "Director Ⅲ"
+    },
+    {
+        "id": 16,
+        "major_position_id": 6,
+        "major_position": "Vice General Manager",
+        "small_position_id": 1,
+        "small_position": "Vice General Manager Ⅰ"
+    },
+    {
+        "id": 17,
+        "major_position_id": 6,
+        "major_position": "Vice General Manager",
+        "small_position_id": 2,
+        "small_position": "Vice General Manager Ⅱ"
+    },
+    {
+        "id": 18,
+        "major_position_id": 6,
+        "major_position": "Vice General Manager",
+        "small_position_id": 3,
+        "small_position": "Vice General Manager Ⅲ"
+    },
+    {
+        "id": 19,
+        "major_position_id": 7,
+        "major_position": "General Manager",
+        "small_position_id": 1,
+        "small_position": "General Manager Ⅰ"
+    },
+    {
+        "id": 20,
+        "major_position_id": 7,
+        "major_position": "General Manager",
+        "small_position_id": 2,
+        "small_position": "General Manager Ⅱ"
+    },
+    {
+        "id": 21,
+        "major_position_id": 7,
+        "major_position": "General Manager",
+        "small_position_id": 3,
+        "small_position": "General Manager Ⅲ"
+    },
+    {
+        "id": 22,
+        "major_position_id": 8,
+        "major_position": "CEO",
+        "small_position_id": 1,
+        "small_position": "CEO Ⅰ"
+    },
+    {
+        "id": 23,
+        "major_position_id": 8,
+        "major_position": "CEO",
+        "small_position_id": 2,
+        "small_position": "CEO Ⅱ"
+    },
+    {
+        "id": 24,
+        "major_position_id": 8,
+        "major_position": "CEO",
+        "small_position_id": 3,
+        "small_position": "CEO Ⅲ"
+    }
+]

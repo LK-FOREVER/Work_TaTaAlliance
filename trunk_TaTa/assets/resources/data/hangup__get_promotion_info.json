@@ -1,0 +1,13 @@
+[
+   {"id":1,"promotion_id":2,"promotion_name":"实习生Ⅱ","add_toplimit":30},
+   {"id":2,"promotion_id":4,"promotion_name":"正式员工Ⅰ","add_toplimit":30},
+   {"id":3,"promotion_id":6,"promotion_name":"正式员工Ⅲ","add_toplimit":30},
+   {"id":4,"promotion_id":8,"promotion_name":"组长Ⅱ","add_toplimit":30},
+   {"id":5,"promotion_id":9,"promotion_name":"组长Ⅲ","add_toplimit":30},
+   {"id":6,"promotion_id":12,"promotion_name":"部门经理Ⅲ","add_toplimit":30},
+   {"id":7,"promotion_id":14,"promotion_name":"总监Ⅱ","add_toplimit":30},
+   {"id":8,"promotion_id":15,"promotion_name":"总监Ⅲ","add_toplimit":30},
+   {"id":9,"promotion_id":16,"promotion_name":"副总经理Ⅰ","add_toplimit":30},
+   {"id":10,"promotion_id":18,"promotion_name":"副总经理Ⅲ","add_toplimit":30},
+   {"id":11,"promotion_id":20,"promotion_name":"总经理Ⅱ","add_toplimit":30}
+]

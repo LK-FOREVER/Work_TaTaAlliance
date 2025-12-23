@@ -1,0 +1,7 @@
+[
+   {"task_id":0,"task_content_name":"击退敌人","task_content_num":20,"task_reward":1,"task_reward_icon":1,"task_reward_num":1000},
+   {"task_id":1,"task_content_name":"招募英雄","task_content_num":1,"task_reward":12,"task_reward_icon":20,"task_reward_num":5},
+   {"task_id":2,"task_content_name":"升级英雄","task_content_num":1,"task_reward":2,"task_reward_icon":2,"task_reward_num":10},
+   {"task_id":3,"task_content_name":"锻造装备","task_content_num":1,"task_reward":2,"task_reward_icon":2,"task_reward_num":10},
+   {"task_id":4,"task_content_name":"点击战斗强化","task_content_num":30,"task_reward":12,"task_reward_icon":20,"task_reward_num":5}
+]

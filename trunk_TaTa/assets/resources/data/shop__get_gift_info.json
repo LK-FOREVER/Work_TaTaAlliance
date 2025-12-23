@@ -1,0 +1,22 @@
+[
+   {"1":[
+            {"id":0,"name":"金币","good_id_1":21,"num_1":500,"good_id_2":0,"num_2":0,"price":"免费","type":1,"times":1,"cost_type":0,"tag":"hc_gift_1"},
+            {"id":1,"name":"金币","good_id_1":21,"num_1":2000,"good_id_2":0,"num_2":0,"price":"20","type":1,"times":10,"cost_type":11,"tag":"hc_gift_2"},
+            {"id":2,"name":"随机紫色英雄拼图","good_id_1":8,"num_1":1,"good_id_2":0,"num_2":0,"price":"10000","type":1,"times":1,"cost_type":1,"tag":"hc_gift_3"},
+            {"id":3,"name":"招募令","good_id_1":19,"num_1":1,"good_id_2":0,"num_2":0,"price":"100","type":1,"times":5,"cost_type":11,"tag":"hc_gift_4"},
+            {"id":12,"name":"精钢","good_id_1":18,"num_1":10,"good_id_2":0,"num_2":0,"price":"50","type":1,"times":1,"cost_type":11,"tag":"hc_gift_5"}
+   ]},
+   {"2":[
+            {"id":4,"name":"金币","good_id_1":13,"num_1":5000,"good_id_2":0,"num_2":0,"price":"500","type":2,"times":10,"cost_type":11,"tag":"hc_gift_6"},
+            {"id":5,"name":"随机紫色英雄拼图","good_id_1":8,"num_1":1,"good_id_2":0,"num_2":0,"price":"30","type":2,"times":10,"cost_type":11,"tag":"hc_gift_7"},
+            {"id":6,"name":"随机橙色英雄拼图","good_id_1":9,"num_1":1,"good_id_2":0,"num_2":0,"price":"50","type":2,"times":5,"cost_type":11,"tag":"hc_gift_8"},
+            {"id":13,"name":"招募令","good_id_1":17,"num_1":5,"good_id_2":0,"num_2":0,"price":"500","type":2,"times":5,"cost_type":11,"tag":"hc_gift_16"}
+   ]},
+   {"3":[
+            {"id":7,"name":"水晶","good_id_1":14,"num_1":60,"good_id_2":0,"num_2":0,"price":6,"type":3,"times":999,"cost_type":3,"tag":"hc_gift_11"},
+            {"id":8,"name":"水晶","good_id_1":14,"num_1":300,"good_id_2":0,"num_2":0,"price":30,"type":3,"times":999,"cost_type":3,"tag":"hc_gift_12"},
+            {"id":9,"name":"水晶","good_id_1":15,"num_1":680,"good_id_2":0,"num_2":0,"price":68,"type":3,"times":999,"cost_type":3,"tag":"hc_gift_13"},
+            {"id":10,"name":"水晶","good_id_1":15,"num_1":1280,"good_id_2":0,"num_2":0,"price":128,"type":3,"times":999,"cost_type":3,"tag":"hc_gift_14"},
+            {"id":11,"name":"水晶","good_id_1":16,"num_1":3280,"good_id_2":0,"num_2":0,"price":328,"type":3,"times":999,"cost_type":3,"tag":"hc_gift_15"}
+   ]}
+]

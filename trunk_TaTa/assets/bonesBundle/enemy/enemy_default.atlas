@@ -1,0 +1,41 @@
+
+enemy_default.png
+size: 132,95
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guajian
+  rotate: true
+  xy: 82, 47
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+koushui
+  rotate: false
+  xy: 98, 9
+  size: 15, 17
+  orig: 17, 20
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: true
+  xy: 2, 2
+  size: 91, 78
+  orig: 91, 86
+  offset: 0, 8
+  index: -1
+shou1
+  rotate: false
+  xy: 82, 5
+  size: 14, 40
+  orig: 14, 41
+  offset: 0, 1
+  index: -1
+shou2
+  rotate: true
+  xy: 98, 28
+  size: 17, 32
+  orig: 17, 33
+  offset: 0, 0
+  index: -1

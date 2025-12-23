@@ -1,0 +1,174 @@
+
+spine_1006.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biyan
+  rotate: false
+  xy: 126, 6
+  size: 72, 16
+  orig: 74, 19
+  offset: 1, 2
+  index: -1
+gebo1
+  rotate: true
+  xy: 322, 11
+  size: 48, 43
+  orig: 50, 53
+  offset: 1, 5
+  index: -1
+gebo2
+  rotate: false
+  xy: 126, 24
+  size: 48, 52
+  orig: 50, 55
+  offset: 1, 2
+  index: -1
+gebo3
+  rotate: true
+  xy: 827, 70
+  size: 79, 75
+  orig: 81, 77
+  offset: 1, 1
+  index: -1
+gebo4
+  rotate: false
+  xy: 176, 40
+  size: 62, 36
+  orig: 64, 38
+  offset: 1, 1
+  index: -1
+kaijia1
+  rotate: false
+  xy: 300, 78
+  size: 35, 23
+  orig: 38, 25
+  offset: 2, 1
+  index: -1
+kaijia2
+  rotate: false
+  xy: 316, 61
+  size: 31, 15
+  orig: 34, 17
+  offset: 1, 1
+  index: -1
+kaijia3
+  rotate: false
+  xy: 349, 65
+  size: 50, 36
+  orig: 53, 38
+  offset: 2, 1
+  index: -1
+maozi
+  rotate: false
+  xy: 2, 78
+  size: 296, 176
+  orig: 298, 178
+  offset: 1, 1
+  index: -1
+pifeng
+  rotate: false
+  xy: 692, 11
+  size: 133, 101
+  orig: 135, 103
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 445, 14
+  size: 157, 87
+  orig: 159, 90
+  offset: 1, 2
+  index: -1
+shouzhi
+  rotate: false
+  xy: 367, 21
+  size: 38, 42
+  orig: 40, 44
+  offset: 1, 1
+  index: -1
+shouzhi1
+  rotate: false
+  xy: 407, 33
+  size: 31, 32
+  orig: 33, 34
+  offset: 1, 1
+  index: -1
+tou
+  rotate: false
+  xy: 300, 103
+  size: 194, 151
+  orig: 197, 154
+  offset: 2, 2
+  index: -1
+toufa1
+  rotate: true
+  xy: 775, 151
+  size: 103, 102
+  orig: 105, 104
+  offset: 1, 1
+  index: -1
+toufa2
+  rotate: true
+  xy: 604, 13
+  size: 89, 86
+  orig: 91, 89
+  offset: 1, 2
+  index: -1
+tui1
+  rotate: true
+  xy: 2, 11
+  size: 65, 64
+  orig: 68, 66
+  offset: 1, 1
+  index: -1
+tui2
+  rotate: false
+  xy: 401, 67
+  size: 42, 34
+  orig: 45, 37
+  offset: 1, 2
+  index: -1
+tui3
+  rotate: true
+  xy: 68, 13
+  size: 63, 56
+  orig: 66, 59
+  offset: 2, 2
+  index: -1
+tui4
+  rotate: false
+  xy: 200, 2
+  size: 61, 36
+  orig: 63, 38
+  offset: 1, 1
+  index: -1
+wuqi
+  rotate: false
+  xy: 496, 104
+  size: 155, 150
+  orig: 157, 152
+  offset: 1, 1
+  index: -1
+wuqishou
+  rotate: true
+  xy: 653, 114
+  size: 140, 120
+  orig: 142, 122
+  offset: 1, 1
+  index: -1
+yifu
+  rotate: true
+  xy: 263, 6
+  size: 39, 57
+  orig: 44, 59
+  offset: 2, 1
+  index: -1
+zhengyan
+  rotate: false
+  xy: 240, 47
+  size: 74, 29
+  orig: 76, 31
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,9 @@
+[
+   {"day":1,"reward_name":"金币*5000","reward_icon":13,"reward":[{"k":1,"v":5000}]},
+   {"day":2,"reward_name":"随机紫色英雄拼图*5","reward_icon":8,"reward":[{"k":8,"v":5}]},
+   {"day":3,"reward_name":"金币*10000","reward_icon":13,"reward":[{"k":1,"v":10000}]},
+   {"day":4,"reward_name":"随机橙色英雄拼图*15","reward_icon":9,"reward":[{"k":9,"v":15}]},
+   {"day":5,"reward_name":"金币*20000","reward_icon":13,"reward":[{"k":1,"v":20000}]},
+   {"day":6,"reward_name":"随机橙色英雄拼图*30","reward_icon":9,"reward":[{"k":9,"v":30}]},
+   {"day":7,"reward_name":"随机橙色英雄拼图*50","reward_icon":9,"reward":[{"k":9,"v":50}]}
+]

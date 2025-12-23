@@ -1,0 +1,23 @@
+[
+   {"id":1,"chapter_start":1,"chapter_end":5,"one_min_reward":[{"k":1,"v":10}],"thirty_min_reward":[],"sixty_min_reward":[]},
+   {"id":2,"chapter_start":6,"chapter_end":10,"one_min_reward":[{"k":1,"v":20}],"thirty_min_reward":[],"sixty_min_reward":[]},
+   {"id":3,"chapter_start":11,"chapter_end":20,"one_min_reward":[{"k":1,"v":40}],"thirty_min_reward":[{"k":11002,"v":1}],"sixty_min_reward":[]},
+   {"id":4,"chapter_start":21,"chapter_end":30,"one_min_reward":[{"k":1,"v":60}],"thirty_min_reward":[{"k":11002,"v":1}],"sixty_min_reward":[]},
+   {"id":5,"chapter_start":31,"chapter_end":40,"one_min_reward":[{"k":1,"v":80}],"thirty_min_reward":[{"k":11002,"v":1}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":6,"chapter_start":41,"chapter_end":50,"one_min_reward":[{"k":1,"v":120}],"thirty_min_reward":[{"k":11002,"v":1}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":7,"chapter_start":51,"chapter_end":60,"one_min_reward":[{"k":1,"v":140}],"thirty_min_reward":[{"k":11002,"v":1}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":8,"chapter_start":61,"chapter_end":70,"one_min_reward":[{"k":1,"v":170}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":9,"chapter_start":71,"chapter_end":80,"one_min_reward":[{"k":1,"v":200}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":10,"chapter_start":81,"chapter_end":90,"one_min_reward":[{"k":1,"v":230}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":11,"chapter_start":91,"chapter_end":100,"one_min_reward":[{"k":1,"v":270}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":1}]},
+   {"id":12,"chapter_start":101,"chapter_end":110,"one_min_reward":[{"k":1,"v":310}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":13,"chapter_start":111,"chapter_end":120,"one_min_reward":[{"k":1,"v":350}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":14,"chapter_start":121,"chapter_end":130,"one_min_reward":[{"k":1,"v":390}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":15,"chapter_start":131,"chapter_end":140,"one_min_reward":[{"k":1,"v":430}],"thirty_min_reward":[{"k":11002,"v":2}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":16,"chapter_start":141,"chapter_end":150,"one_min_reward":[{"k":1,"v":460}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":17,"chapter_start":151,"chapter_end":160,"one_min_reward":[{"k":1,"v":510}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":18,"chapter_start":161,"chapter_end":170,"one_min_reward":[{"k":1,"v":550}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":2}]},
+   {"id":19,"chapter_start":171,"chapter_end":180,"one_min_reward":[{"k":1,"v":600}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":3}]},
+   {"id":20,"chapter_start":181,"chapter_end":190,"one_min_reward":[{"k":1,"v":750}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":3}]},
+   {"id":21,"chapter_start":191,"chapter_end":200,"one_min_reward":[{"k":1,"v":850}],"thirty_min_reward":[{"k":11002,"v":3}],"sixty_min_reward":[{"k":11001,"v":3}]}
+]

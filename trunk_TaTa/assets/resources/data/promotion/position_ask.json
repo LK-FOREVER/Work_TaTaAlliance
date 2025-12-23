@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "position_name": "实习生Ⅰ",
+        "fund": "/",
+        "performance": "/",
+        "schedule": "/"
+    },
+    {
+        "id": 2,
+        "position_name": "实习生Ⅱ",
+        "fund": 2000,
+        "performance": 10,
+        "schedule": 5
+    },
+    {
+        "id": 3,
+        "position_name": "实习生Ⅲ",
+        "fund": 4000,
+        "performance": 15,
+        "schedule": 10
+    },
+    {
+        "id": 4,
+        "position_name": "正式员工Ⅰ",
+        "fund": 8000,
+        "performance": 50,
+        "schedule": 20
+    },
+    {
+        "id": 5,
+        "position_name": "正式员工Ⅱ",
+        "fund": 10000,
+        "performance": 80,
+        "schedule": 25
+    },
+    {
+        "id": 6,
+        "position_name": "正式员工Ⅲ",
+        "fund": 12000,
+        "performance": 150,
+        "schedule": 30
+    },
+    {
+        "id": 7,
+        "position_name": "组长Ⅰ",
+        "fund": 14000,
+        "performance": 300,
+        "schedule": 35
+    },
+    {
+        "id": 8,
+        "position_name": "组长Ⅱ",
+        "fund": 16000,
+        "performance": 450,
+        "schedule": 40
+    },
+    {
+        "id": 9,
+        "position_name": "组长Ⅲ",
+        "fund": 20000,
+        "performance": 670,
+        "schedule": 50
+    },
+    {
+        "id": 10,
+        "position_name": "部门经理Ⅰ",
+        "fund": 24000,
+        "performance": 960,
+        "schedule": 60
+    },
+    {
+        "id": 11,
+        "position_name": "部门经理Ⅱ",
+        "fund": 26000,
+        "performance": 1150,
+        "schedule": 65
+    },
+    {
+        "id": 12,
+        "position_name": "部门经理Ⅲ",
+        "fund": 28000,
+        "performance": 1300,
+        "schedule": 70
+    },
+    {
+        "id": 13,
+        "position_name": "总监Ⅰ",
+        "fund": 30000,
+        "performance": 1520,
+        "schedule": 75
+    },
+    {
+        "id": 14,
+        "position_name": "总监Ⅱ",
+        "fund": 32000,
+        "performance": 1800,
+        "schedule": 80
+    },
+    {
+        "id": 15,
+        "position_name": "总监Ⅲ",
+        "fund": 36000,
+        "performance": 2030,
+        "schedule": 90
+    },
+    {
+        "id": 16,
+        "position_name": "副总经理Ⅰ",
+        "fund": 40000,
+        "performance": 3000,
+        "schedule": 100
+    },
+    {
+        "id": 17,
+        "position_name": "副总经理Ⅱ",
+        "fund": 52500,
+        "performance": 3700,
+        "schedule": 105
+    },
+    {
+        "id": 18,
+        "position_name": "副总经理Ⅲ",
+        "fund": 55000,
+        "performance": 4500,
+        "schedule": 110
+    },
+    {
+        "id": 19,
+        "position_name": "总经理Ⅰ",
+        "fund": 60000,
+        "performance": 5000,
+        "schedule": 120
+    },
+    {
+        "id": 20,
+        "position_name": "总经理Ⅱ",
+        "fund": 62500,
+        "performance": 6000,
+        "schedule": 125
+    },
+    {
+        "id": 21,
+        "position_name": "总经理Ⅲ",
+        "fund": 65000,
+        "performance": 7000,
+        "schedule": 130
+    },
+    {
+        "id": 22,
+        "position_name": "首席执行官Ⅰ",
+        "fund": 70000,
+        "performance": 8000,
+        "schedule": 140
+    },
+    {
+        "id": 23,
+        "position_name": "首席执行官Ⅱ",
+        "fund": 72500,
+        "performance": 9000,
+        "schedule": 145
+    },
+    {
+        "id": 24,
+        "position_name": "首席执行官Ⅲ",
+        "fund": 75000,
+        "performance": 10000,
+        "schedule": 150
+    }
+]

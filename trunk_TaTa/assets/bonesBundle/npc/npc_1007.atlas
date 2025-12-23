@@ -1,0 +1,55 @@
+
+npc_1007.png
+size: 132,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dabi
+  rotate: true
+  xy: 88, 50
+  size: 36, 39
+  orig: 38, 44
+  offset: 1, 1
+  index: -1
+dabi2
+  rotate: false
+  xy: 2, 2
+  size: 47, 39
+  orig: 49, 41
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 88
+  size: 128, 182
+  orig: 130, 184
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: true
+  xy: 81, 25
+  size: 21, 20
+  orig: 23, 22
+  offset: 1, 1
+  index: -1
+xiaobi
+  rotate: false
+  xy: 48, 48
+  size: 38, 38
+  orig: 40, 40
+  offset: 1, 1
+  index: -1
+xiaobi2
+  rotate: false
+  xy: 2, 43
+  size: 44, 43
+  orig: 46, 45
+  offset: 1, 1
+  index: -1
+手
+  rotate: false
+  xy: 51, 22
+  size: 28, 24
+  orig: 32, 27
+  offset: 3, 1
+  index: -1
