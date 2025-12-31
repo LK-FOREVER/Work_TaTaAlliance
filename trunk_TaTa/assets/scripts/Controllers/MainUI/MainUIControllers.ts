@@ -607,7 +607,7 @@ export class MainUIControllers extends Component {
         this.node.getChildByName("open_seven_sign_btn").getChildByName("reddot").active = !GameData.userData.sevenSignIsReceive;
 
         //主界面 招募按钮红点
-        this.open_invite_box_btn.getChildByName("common_red_dot").active = GameData.userData.hasGoodsList[5] > 0 || GameData.userData.inviteTodayAdLastNum > 0
+        this.open_invite_box_btn.getChildByName("common_red_dot").active = (GameData.userData.hasGoodsList[5] > 0 || GameData.userData.inviteTodayAdLastNum > 0) && GameData.userData.inviteLimiteDailyNum < GameData.userData.inviteLimiteDailyTotalNum;
 
         // this.open_equip_btn.getChildByName("common_red_dot").active = GameData.userData.hasGoodsList[8] > 0
         // const equip_upgrade_info = TextUtils.Instance.equip__get_doll_machine_upgrade_info
