@@ -154,7 +154,7 @@ export default class chat_view extends Component {
 
         this.top_btns = this.chat_container.getChildByName("top_btns")
         this.tab_list = this.chat_container.getChildByName("tab_list")
-        this.close_btn = this.chat_container.getChildByName("close_btn")
+        this.close_btn = this.chat_container.getChildByName("bottom_bg_2").getChildByName("close_btn")
         this.mask_bg = this.node.getChildByName("mask_bg")
         this.set_view = this.chat_container.getChildByName("set_view")
         this.filter_world = this.set_view.getChildByName("filter_world")

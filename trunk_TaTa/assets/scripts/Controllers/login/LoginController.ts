@@ -299,7 +299,7 @@ export class LoginController extends Component {
             if (sys.os === sys.OS.ANDROID || sys.isNative) {
                 native.bridge.sendToNative('login', 'test');
             } else {
-                this.onlogin(7 + "|" + "user1" + "|" + 7);//修改"user7"来切换不同账号，在编辑器中测试
+                this.onlogin(7 + "|" + "user5" + "|" + 7);//修改"user7"来切换不同账号，在编辑器中测试
             }
             // this.onlogin(7 + "|" + "user" + "|" + 7);
             //抖音

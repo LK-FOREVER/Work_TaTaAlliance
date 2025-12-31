@@ -12,9 +12,11 @@ import { AudioManager } from "../../Managers/AudioManager";
 const { ccclass, property } = _decorator;
 
 interface IEquipment {
-    equip_id: number;
-    equip_quality: number;
-    equip_lv: number;
+    equip_id: number,
+    effect_name: string,
+    effect_value: number,
+    equip_quality: number,
+    equip_lv: number,
 }
 
 @ccclass('equipControllers')
@@ -121,7 +123,7 @@ export class equipController extends Component {
     open_upgrade_handler() {
         // 创建娃娃机升级界面
         let view = this.node.getChildByName("equip_upgrade_view");
-        if(view) {
+        if (view) {
             view.destroy();
         }
         const equip_upgrade_view = instantiate(this.equip_upgrade_view)
@@ -220,13 +222,13 @@ export class equipController extends Component {
             return
         }
 
-        let id = GameData.taskData.continuousTaskId%TextUtils.Instance.task__get_continuous_task.length
-        if(id == 3) {
+        let id = GameData.taskData.continuousTaskId % TextUtils.Instance.task__get_continuous_task.length
+        if (id == 3) {
             GameData.taskData.continueTaskContentNumList[id]++;
             EventManager.Instance.emit(EventConst.UPDATE_CONTINUOUS_TASK)
         }
         GameData.taskData.dailyTaskContentNumList[0]++;
-        
+
         GameData.userData.hasGoodsList[8] -= 1
         GameData.userData.hasGoodsList[10] += 1
         this.generateRandomEquipment()
@@ -236,7 +238,7 @@ export class equipController extends Component {
 
         // this.equip_claw.getComponent(sp.Skeleton).setAnimation(0, "grab_1", false);
         // this.equip_claw.getComponent(sp.Skeleton).setCompleteListener(() => {
-          
+
         // });
 
         //锻造动画插入
